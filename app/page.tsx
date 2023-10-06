@@ -1,8 +1,6 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-red-400">
+    <div className="w-full h-screen bg-gray-300">
       <h1>ACTIVE</h1>
       <h2>ACTIVE</h2>
       <h3>ACTIVE</h3>
