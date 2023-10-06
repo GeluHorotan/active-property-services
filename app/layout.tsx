@@ -1,3 +1,4 @@
+import Navigation from '@/components/Navigation';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <header></header>
+        <header>
+          <Navigation />
+        </header>
         <main>{children}</main>
         <footer></footer>
       </body>
