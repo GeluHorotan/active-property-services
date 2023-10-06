@@ -1,0 +1,18 @@
+{
+  "main_buttons": [
+    { "title": "Panou de control" },
+    { "title": "Tehnic" },
+    { "title": "Imobiliare" },
+    { "title": "Furnizori" },
+    { "title": "Marketplace" },
+    { "title": "Rapoarte" },
+    { "title": "Contacte" },
+    { "title": "Templates" },
+    { "title": "Financiar" }
+  ],
+  "secondary_buttons": [
+    { "title": "Calendar" },
+    { "title": "Setari" },
+    { "title": "Support & Feedback" }
+  ]
+}

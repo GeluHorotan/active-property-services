@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply pl-[13px] py-4;
+    @apply pl-[13px] py-4 h-screen;
   }
   h1 {
     @apply text-[30pt];
