@@ -94,6 +94,9 @@ const config: Config = {
       },
     },
   },
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
   plugins: [],
 };
 export default config;
