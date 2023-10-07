@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex flex-col gap-9">
+    <div className="flex flex-col gap-8 mt-6">
       <div className="flex  justify-between  ">
         <h3 className="font-semibold">Dashboard</h3>
         <input type="text" placeholder="Cautare" className="p-2 rounded-lg" />
