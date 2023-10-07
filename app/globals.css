@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  /* body {
     @apply pl-[13px] py-4;
-  }
+  } */
   h1 {
     @apply text-[30pt];
   }

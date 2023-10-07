@@ -23,10 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <header>
-          <Navigation />
-        </header>
-        <main>{children}</main>
+        <div className="pl-3 py-4 bg-red-700 w-full h-screen flex items-start">
+          <header className="h-full w-full">
+            <Navigation />
+          </header>
+          <main>{children}</main>
+        </div>
         <footer></footer>
       </body>
     </html>
