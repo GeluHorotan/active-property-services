@@ -9,7 +9,7 @@ const Actions: FC = () => {
   return (
     <div className="col-span-6  ">
       <div className="flex items-center gap-5 ">
-        <div className=" w-full grid grid-cols-2  rounded-lg gap-5 items-center justify-between ">
+        <div className=" w-full grid grid-cols-2  gap-5 items-center justify-between ">
           {quick_actions.map((action: IAction, i: number) => {
             return (
               <QuickAction

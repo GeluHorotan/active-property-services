@@ -11,8 +11,8 @@ export default function Home() {
       <div className=" w-full h-full grid grid-cols-13  gap-5">
         <Actions />
         <div className="  bg-blue-400 col-span-7 h-full ">T</div>
-        <div className="h-[473px] bg-blue-400 col-span-5 ">Y</div>
-        <div className="h-[473px] bg-blue-400 col-span-8 ">Y</div>
+        <div className="h-[473px] bg-blue-400 col-span-6 ">Y</div>
+        <div className="h-[473px] bg-blue-400 col-span-7 ">Y</div>
       </div>
     </div>
   );
