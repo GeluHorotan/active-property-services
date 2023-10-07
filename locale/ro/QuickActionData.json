@@ -1,0 +1,25 @@
+{
+  "cards": [
+    {
+      "title": "Financiar",
+      "iconName": "Money",
+      "entries": [
+        {
+          "data_number": 10,
+          "data_desc": "facturi de plata"
+        },
+        {
+          "data_number": 2,
+          "data_desc": "plati restante",
+          "highlight": true
+        },
+        {
+          "data_number": 6,
+          "data_desc": "arierate",
+          "highlight": true
+        }
+      ],
+      "action_name": "Factura noua"
+    }
+  ]
+}

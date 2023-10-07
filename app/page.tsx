@@ -1,4 +1,9 @@
+import QuickAction from '@components/QuickAction';
+import QuickActionData from '@ro/QuickActionData.json';
+
 export default function Home() {
+  const { cards } = QuickActionData;
+  console.log(cards);
   return (
     <div className="flex flex-col gap-8 mt-6">
       <div className="flex  justify-between  ">
@@ -10,9 +15,9 @@ export default function Home() {
         <div className=" col-span-5  ">
           <div className="flex items-center flex-wrap gap-5 ">
             <div className=" w-full h-[181px]  rounded-lg flex items-center justify-between gap-5">
-              <div className="w-1/2 h-full p-5  bg-white rounded-[20px] flex items-center justify-center">
-                Financiar
-              </div>
+              {cards.map((card, i) => {
+                return <QuickAction key={i} card={card}></QuickAction>;
+              })}
               <div className="w-1/2 h-full bg-white rounded-[20px]">Y</div>
             </div>
             <div className="w-full h-[181px] bg-blue-400 rounded-lg">Y</div>
