@@ -1,12 +1,12 @@
 {
   "main_buttons": [
     { "title": "Panou de control", "iconName": "Panel" },
-    { "title": "Financiar", "iconName": "Money" }
+    { "title": "Financiar", "iconName": "Money" },
     { "title": "Tehnic", "iconName": "Technical" },
-    { "title": "Imobiliare", "iconName": "Real-estate" },
-    { "title": "Furnizori", "iconName": "Suppliers" },
+    { "title": "Imobiliare", "iconName": "RealEstate" },
+    { "title": "Furnizori", "iconName": "Supplier" },
     { "title": "Marketplace", "iconName": "Marketplace" },
-    { "title": "Rapoarte", "iconName": "Raports" },
+    { "title": "Rapoarte", "iconName": "Reports" },
     { "title": "Contacte", "iconName": "Contacts" },
     { "title": "Templates", "iconName": "Templates" }
   ],

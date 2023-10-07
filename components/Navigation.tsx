@@ -19,7 +19,7 @@ const Navigation: FC = () => {
                 key={i}
                 className="rounded-2xl flex gap-5 w-full  px-5 py-4 pointer-events-none hover:bg-[#5F76C7] duration-300 ease-out transition-all"
               >
-                <IconFinder name={'Panel'}></IconFinder>
+                <IconFinder name={btn?.iconName} />
                 <Link
                   href={'#'}
                   key={i}
@@ -37,8 +37,10 @@ const Navigation: FC = () => {
           return (
             <div
               key={i}
-              className="rounded-2xl w-full pointer-events-none text-[#fff]  hover:text-[#5F76C7] duration-300 ease-out transition-all"
+              className="rounded-2xl w-full pointer-events-none text-[#fff]  hover:text-[#5F76C7] flex gap-5 duration-300 ease-out transition-all"
             >
+              <IconFinder name={btn?.iconName}></IconFinder>
+
               <Link
                 href={'#'}
                 key={i}
