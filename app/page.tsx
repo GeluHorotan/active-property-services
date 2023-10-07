@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-8 mt-6">
       <div className="flex  justify-between  ">
-        <h3 className="font-semibold">Dashboard</h3>
+        <h3 className="font-semibold text-custom_gray-900">Dashboard</h3>
         <input type="text" placeholder="Cautare" className="p-2 rounded-lg" />
       </div>
 
