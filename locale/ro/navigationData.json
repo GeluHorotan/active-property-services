@@ -1,14 +1,19 @@
 {
   "main_buttons": [
-    { "title": "Panou de control", "iconName": "Panel" },
-    { "title": "Financiar", "iconName": "Money" },
-    { "title": "Tehnic", "iconName": "Technical" },
-    { "title": "Imobiliare", "iconName": "RealEstate" },
-    { "title": "Furnizori", "iconName": "Supplier" },
-    { "title": "Marketplace", "iconName": "Marketplace" },
+    {
+      "title": "Panou de control",
+      "iconName": "Panel",
+      "isExtendable": true,
+      "isGreen": true
+    },
+    { "title": "Financiar", "iconName": "Money", "isExtendable": true },
+    { "title": "Tehnic", "iconName": "Technical", "isExtendable": true },
+    { "title": "Imobiliare", "iconName": "RealEstate", "isExtendable": true },
+    { "title": "Furnizori", "iconName": "Supplier", "isExtendable": true },
+    { "title": "Marketplace", "iconName": "Marketplace", "isExtendable": true },
     { "title": "Rapoarte", "iconName": "Reports" },
-    { "title": "Contacte", "iconName": "Contacts" },
-    { "title": "Templates", "iconName": "Templates" }
+    { "title": "Contacte", "iconName": "Contacts", "isExtendable": true },
+    { "title": "Templates", "iconName": "Templates", "isExtendable": true }
   ],
   "secondary_buttons": [
     { "title": "Calendar", "iconName": "Calendar" },
