@@ -7,13 +7,13 @@ export default function Home() {
       </div>
 
       <div className=" w-full h-full grid grid-cols-13  gap-5">
-        <div className="bg-yellow-400 col-span-5  ">
+        <div className=" col-span-5  ">
           <div className="flex items-center flex-wrap gap-5 ">
-            <div className=" w-full h-[181px] bg-blue-400 rounded-lg flex items-center justify-between gap-5">
-              <div className="w-1/2 h-full bg-red-400 rounded-lg flex items-center justify-center">
-                Y
+            <div className=" w-full h-[181px]  rounded-lg flex items-center justify-between gap-5">
+              <div className="w-1/2 h-full p-5  bg-white rounded-lg flex items-center justify-center">
+                Financiar
               </div>
-              <div className="w-1/2 h-full bg-red-400">Y</div>
+              <div className="w-1/2 h-full bg-white rounded-lg">Y</div>
             </div>
             <div className="w-full h-[181px] bg-blue-400 rounded-lg">Y</div>
             <div className=" w-full h-[120px] bg-blue-400 rounded-lg">Y</div>
