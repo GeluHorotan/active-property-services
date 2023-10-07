@@ -12,7 +12,9 @@
           "name": "Casa Alessia, Siriului nr 5."
         }
       ],
-      "isRead": false
+      "isRead": false,
+      "category": "Financiar",
+      "iconName": "Money"
     },
     {
       "title": "Factura Curent",
@@ -27,7 +29,9 @@
         }
       ],
       "reminder": true,
-      "isRead": false
+      "isRead": false,
+      "category": "Financiar",
+      "iconName": "Money"
     },
     {
       "title": "Reparatie",
@@ -45,7 +49,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Reparatie instalatie electrica",
@@ -63,7 +69,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Facturare instalatie electrica",
@@ -79,7 +87,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Reparatie",
@@ -96,7 +106,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Reparatie instalatie electrica",
@@ -113,7 +125,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Facturare instalatie electrica",
@@ -127,7 +141,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Reparatie",
@@ -145,7 +161,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Reparatie instalatie electrica",
@@ -159,7 +177,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     },
     {
       "title": "Facturare instalatie electrica",
@@ -173,7 +193,9 @@
         }
       ],
 
-      "isRead": true
+      "isRead": true,
+      "category": "Tehnic",
+      "iconName": "Technical"
     }
   ]
 }
