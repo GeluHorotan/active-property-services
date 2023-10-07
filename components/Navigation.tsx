@@ -7,7 +7,7 @@ import IconFinder from '@icons/IconFinder';
 const Navigation: FC = () => {
   const { main_buttons, secondary_buttons } = navigationData;
   return (
-    <nav className=" w-[25%] h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
+    <nav className=" w-[15%] h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
       <div className="flex flex-col items-start gap-16  w-full relative">
         <div className="absolute ringShadow -right-7 top-12 rounded-full flex items-center w-8 h-8 justify-center bg-[#FFF]  ">
           <IconFinder
@@ -29,9 +29,13 @@ const Navigation: FC = () => {
                 } `}
               >
                 <div className="w-full justify-between   items-center flex  pointer-events-auto cursor-pointer  ">
-                  <div className="flex gap-5 items-center  ">
+                  <div className=" w-full grid grid-cols-6 gap-10 items-center ">
                     <IconFinder name={btn?.iconName} />
-                    <Link href={'#'} key={i} className="font-medium  w-full  ">
+                    <Link
+                      href={'#'}
+                      key={i}
+                      className="font-medium text-[15px]  col-span-5  "
+                    >
                       {btn?.title}
                     </Link>
                   </div>
@@ -51,7 +55,6 @@ const Navigation: FC = () => {
               className="rounded-2xl  px-5 w-full pointer-events-none text-[#fff]  hover:text-[#5F76C7] flex gap-5 duration-300 ease-out transition-all"
             >
               <IconFinder name={btn?.iconName}></IconFinder>
-
               <Link
                 href={'#'}
                 key={i}
