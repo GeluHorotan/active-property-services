@@ -1,16 +1,16 @@
 import { FC } from 'react';
-import PanelIcon from './PanelIcon';
-import MoneyIcon from './MoneyIcon';
-import TechnicalIcon from './TechnicalIcon';
-import RealEstateIcon from './RealEstateIcon';
-import SupplierIcon from './SupplierIcon';
-import MarketplaceIcon from './MarketplaceIcon';
-import ReportsIcon from './ReportsIcon';
-import ContactsIcon from './ContactsIcon';
-import TemplatesIcon from './TemplatesIcon';
-import CalendarIcon from './CalendarIcon';
-import SettingsIcon from './SettingsIcon';
-import SupportIcon from './SupportIcon';
+import PanelIcon from '@icons/PanelIcon';
+import MoneyIcon from '@icons/MoneyIcon';
+import TechnicalIcon from '@icons/TechnicalIcon';
+import RealEstateIcon from '@icons/RealEstateIcon';
+import SupplierIcon from '@icons/SupplierIcon';
+import MarketplaceIcon from '@icons/MarketplaceIcon';
+import ReportsIcon from '@icons/ReportsIcon';
+import ContactsIcon from '@icons/ContactsIcon';
+import TemplatesIcon from '@icons/TemplatesIcon';
+import CalendarIcon from '@icons/CalendarIcon';
+import SettingsIcon from '@icons/SettingsIcon';
+import SupportIcon from '@icons/SupportIcon';
 
 interface IIconFinder {
   name: string;
