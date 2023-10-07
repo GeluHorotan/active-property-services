@@ -23,7 +23,7 @@
     },
     {
       "title": "Tehnic",
-      "iconName": "Money",
+      "iconName": "Technical",
       "entries": [
         {
           "data_number": 10,
@@ -86,7 +86,7 @@
     },
     {
       "title": "Furnizori",
-      "iconName": "Money",
+      "iconName": "Supplier",
       "entries": [
         {
           "data_number": 45,
@@ -97,7 +97,7 @@
     },
     {
       "title": "Calendar",
-      "iconName": "Money",
+      "iconName": "Calendar",
       "entries": [
         {
           "data_number": 2,

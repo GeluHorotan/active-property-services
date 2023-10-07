@@ -5,8 +5,9 @@ const PlusIcons: FC<IIcon> = ({ size, className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16.8"
-      height="16.8"
+      width={size || 16.8}
+      height={size || 16.8}
+      className={className}
       viewBox="0 0 16.8 16.8"
     >
       <g id="add-circle-outline" transform="translate(0.4 0.4)">

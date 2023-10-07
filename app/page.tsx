@@ -12,17 +12,24 @@ export default function Home() {
       </div>
 
       <div className=" w-full h-full grid grid-cols-13  gap-5">
-        <div className=" col-span-5 ">
+        <div className=" col-span-6 ">
           <div className="flex items-center gap-5 ">
-            <div className=" w-full bg-red-400 rounded-lg grid grid-cols-2 grid-rows-3 items-center justify-between gap-5">
+            <div className=" w-full gap-5 rounded-lg flex flex-wrap items-center justify-between ">
               {cards.map((card, i) => {
-                return <QuickAction key={i} card={card}></QuickAction>;
+                return (
+                  <QuickAction
+                    isSingleEntry={card.entries.length === 1 ? true : false}
+                    key={i}
+                    card={card}
+                  ></QuickAction>
+                );
               })}
             </div>
           </div>
         </div>
-        <div className=" h-[522px] bg-blue-400 col-span-8">T</div>
-        <div className="h-[473px] bg-blue-400 col-span-full ">Y</div>
+        <div className="  bg-blue-400 col-span-7 h-full ">T</div>
+        <div className="h-[473px] bg-blue-400 col-span-5 ">Y</div>
+        <div className="h-[473px] bg-blue-400 col-span-8 ">Y</div>
       </div>
     </div>
   );
