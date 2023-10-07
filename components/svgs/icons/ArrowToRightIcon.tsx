@@ -1,7 +1,7 @@
 import { IIcon } from '@/types/IIcon';
 import { FC } from 'react';
 
-const ArrowIcon: FC<IIcon> = ({ size, className }) => {
+const ArrowToRightIcon: FC<IIcon> = ({ size, className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +19,4 @@ const ArrowIcon: FC<IIcon> = ({ size, className }) => {
   );
 };
 
-export default ArrowIcon;
+export default ArrowToRightIcon;

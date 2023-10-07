@@ -11,7 +11,8 @@ import TemplatesIcon from '@icons/TemplatesIcon';
 import CalendarIcon from '@icons/CalendarIcon';
 import SettingsIcon from '@icons/SettingsIcon';
 import SupportIcon from '@icons/SupportIcon';
-import ArrowIcon from '@icons/ArrowIcon';
+import ArrowToRightIcon from '@icons/ArrowToRightIcon';
+import ArrowToLeftIcon from '@icons/ArrowToLeftIcon';
 
 interface IIconFinder {
   name: string;
@@ -33,7 +34,8 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Calendar: <CalendarIcon size={size} className={className} />,
     Settings: <SettingsIcon size={size} className={className} />,
     Support: <SupportIcon size={size} className={className} />,
-    Arrow: <ArrowIcon size={size} className={className} />,
+    ArrowToRight: <ArrowToRightIcon size={size} className={className} />,
+    ArrowToLeft: <ArrowToLeftIcon size={size} className={className} />,
   };
 
   return icons[name];

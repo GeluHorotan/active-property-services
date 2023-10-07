@@ -7,14 +7,14 @@ import IconFinder from '@icons/IconFinder';
 const Navigation: FC = () => {
   const { main_buttons, secondary_buttons } = navigationData;
   return (
-    <nav className=" w-[15%] h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
+    <nav className=" w-[25%] h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
       <div className="flex flex-col items-start gap-16  w-full relative">
-        <div className="absolute -right-7 top-12 rounded-full flex items-center w-8 h-8 justify-center bg-[#FFF]  ">
+        <div className="absolute ringShadow -right-7 top-12 rounded-full flex items-center w-8 h-8 justify-center bg-[#FFF]  ">
           <IconFinder
-            name={'Arrow'}
+            name={'ArrowToLeft'}
             className="fill-blue-200"
             size={10}
-          ></IconFinder>
+          />
         </div>
         <div className="w-full px-7     flex">
           <Logo />
@@ -36,7 +36,7 @@ const Navigation: FC = () => {
                     </Link>
                   </div>
 
-                  {btn?.isExtendable && <IconFinder name={'Arrow'} />}
+                  {btn?.isExtendable && <IconFinder name={'ArrowToRight'} />}
                 </div>
               </div>
             );
