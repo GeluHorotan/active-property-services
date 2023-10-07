@@ -12,9 +12,9 @@ export default function Home() {
       </div>
 
       <div className=" w-full h-full grid grid-cols-13  gap-5">
-        <div className=" col-span-6 ">
+        <div className="col-span-6 ">
           <div className="flex items-center gap-5 ">
-            <div className=" w-full gap-5 rounded-lg flex flex-wrap items-center justify-between ">
+            <div className=" w-full grid grid-cols-2  rounded-lg gap-5 items-center justify-between ">
               {cards.map((card, i) => {
                 return (
                   <QuickAction

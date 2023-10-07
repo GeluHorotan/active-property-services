@@ -13,7 +13,9 @@ import SettingsIcon from '@icons/SettingsIcon';
 import SupportIcon from '@icons/SupportIcon';
 import ArrowToRightIcon from '@icons/ArrowToRightIcon';
 import ArrowToLeftIcon from '@icons/ArrowToLeftIcon';
-import PlusIcons from './PlusIcons';
+import PlusIcons from '@icons/PlusIcons';
+import PortfolioIcon from '@icons/PortfolioIcon';
+import LeasingIcon from '@icons/LeasingIcon';
 
 interface IIconFinder {
   name: string;
@@ -38,6 +40,8 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     ArrowToRight: <ArrowToRightIcon size={size} className={className} />,
     ArrowToLeft: <ArrowToLeftIcon size={size} className={className} />,
     Plus: <PlusIcons size={size} className={className} />,
+    Portfolio: <PortfolioIcon size={size} className={className} />,
+    Leasing: <LeasingIcon size={size} className={className} />,
   };
 
   return icons[name];

@@ -9,7 +9,7 @@ interface IQuickAction {
 
 const QuickAction: FC<IQuickAction> = ({ card, isSingleEntry }) => {
   return (
-    <div className="w-[48%]  pb-5 px-5 pt-4  bg-white rounded-[20px] flex-col gap-3 flex items-center justify-center">
+    <div className="pb-5 px-5 pt-4  bg-white rounded-[20px] flex-col gap-3 flex items-center justify-center">
       {/* Title */}
       <div className="w-full flex justify-between  items-center  ">
         <h6 className="font-semibold">{card?.title}</h6>
