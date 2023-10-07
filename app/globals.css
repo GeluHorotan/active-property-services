@@ -11,25 +11,25 @@
     @apply pl-[13px] py-4;
   } */
   h1 {
-    @apply text-[30pt];
+    @apply text-[30px];
   }
   h2 {
-    @apply text-[29pt];
+    @apply text-[29px];
   }
   h3 {
-    @apply text-[26pt];
+    @apply text-[26px];
   }
   h4 {
-    @apply text-[18pt];
+    @apply text-[18px];
   }
   h5 {
-    @apply text-[16pt];
+    @apply text-[16px];
   }
   h6 {
-    @apply text-[15pt];
+    @apply text-[15px];
   }
   p {
-    @apply text-[14pt];
+    @apply text-[14px];
   }
 }
 
