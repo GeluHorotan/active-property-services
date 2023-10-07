@@ -3,7 +3,7 @@ import QuickActionData from '@ro/QuickActionData.json';
 
 export default function Home() {
   const { cards } = QuickActionData;
-  console.log(cards);
+
   return (
     <div className="flex flex-col gap-8 mt-6">
       <div className="flex  justify-between  ">
@@ -12,16 +12,13 @@ export default function Home() {
       </div>
 
       <div className=" w-full h-full grid grid-cols-13  gap-5">
-        <div className=" col-span-5  ">
-          <div className="flex items-center flex-wrap gap-5 ">
-            <div className=" w-full h-[181px]  rounded-lg flex items-center justify-between gap-5">
+        <div className=" col-span-5 ">
+          <div className="flex items-center gap-5 ">
+            <div className=" w-full bg-red-400 rounded-lg grid grid-cols-2 grid-rows-3 items-center justify-between gap-5">
               {cards.map((card, i) => {
                 return <QuickAction key={i} card={card}></QuickAction>;
               })}
-              <div className="w-1/2 h-full bg-white rounded-[20px]">Y</div>
             </div>
-            <div className="w-full h-[181px] bg-blue-400 rounded-lg">Y</div>
-            <div className=" w-full h-[120px] bg-blue-400 rounded-lg">Y</div>
           </div>
         </div>
         <div className=" h-[522px] bg-blue-400 col-span-8">T</div>

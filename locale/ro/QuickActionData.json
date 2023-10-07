@@ -20,6 +20,91 @@
         }
       ],
       "action_name": "Factura noua"
+    },
+    {
+      "title": "Tehnic",
+      "iconName": "Money",
+      "entries": [
+        {
+          "data_number": 10,
+          "data_desc": "tichete in lucru"
+        },
+        {
+          "data_number": 6,
+          "data_desc": "tichete intarziate",
+          "highlight": true
+        },
+        {
+          "data_number": 6,
+          "data_unit": "tichete",
+          "data_desc": "mentenata",
+          "highlight": true
+        }
+      ],
+      "action_name": "Tichet nou"
+    },
+    {
+      "title": "Portofoliu",
+      "iconName": "Money",
+      "entries": [
+        {
+          "data_number": 35,
+          "data_desc": "proprietati"
+        },
+        {
+          "data_number": 10,
+          "data_desc": "proprietati vacante",
+          "highlight": true
+        },
+        {
+          "data_number": 57,
+          "data_unit": "%",
+          "data_desc": "completare date"
+        }
+      ],
+      "action_name": "Proprietate noua"
+    },
+    {
+      "title": "Leasing",
+      "iconName": "Money",
+      "entries": [
+        {
+          "data_number": 10,
+          "data_desc": "tichete in lucru"
+        },
+        {
+          "data_number": 2,
+          "data_desc": "tichete vanzare"
+        },
+        {
+          "data_number": 2,
+          "data_unit": "tichete",
+          "data_desc": "expirari in 90 zile"
+        }
+      ],
+      "action_name": "Tichet nou"
+    },
+    {
+      "title": "Furnizori",
+      "iconName": "Money",
+      "entries": [
+        {
+          "data_number": 45,
+          "data_desc": "oferte in lucru"
+        }
+      ],
+      "action_name": "Furnizor nou"
+    },
+    {
+      "title": "Calendar",
+      "iconName": "Money",
+      "entries": [
+        {
+          "data_number": 2,
+          "data_desc": "evenimente"
+        }
+      ],
+      "action_name": "Eveniment nou"
     }
   ]
 }
