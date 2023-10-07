@@ -7,10 +7,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    borderRadius: {
-      '4xl': '20px',
-    },
     extend: {
+      borderRadius: {
+        '4xl': '20px',
+      },
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',
         '14': 'repeat(14, minmax(0, 1fr))',
