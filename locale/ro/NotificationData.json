@@ -1,0 +1,179 @@
+{
+  "notifications": [
+    {
+      "title": "Factura ENgie",
+      "desc": "A fost emis o noua factura Engie. Plateste acum. Data scadenta a facturii este 12.08.2023",
+      "date": "24.10.2023",
+      "tags": [
+        {
+          "name": "Facturare"
+        },
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+      "isRead": false
+    },
+    {
+      "title": "Factura Curent",
+      "desc": "A fost emis o noua factura Engie. Plateste acum. Data scadenta a facturii este 12.08.2023",
+      "date": "24.10.2023",
+      "tags": [
+        {
+          "name": "Reminder"
+        },
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+      "reminder": true,
+      "isRead": false
+    },
+    {
+      "title": "Reparatie",
+      "desc": "A fost emisa o noua oferta de negociere pentru reparatia acoperisului de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        {
+          "name": "Tichet"
+        },
+        {
+          "name": "Reparatie"
+        },
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Reparatie instalatie electrica",
+      "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        {
+          "name": "Tichet"
+        },
+        {
+          "name": "Incasare"
+        },
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Facturare instalatie electrica",
+      "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        {
+          "name": "Plata"
+        },
+
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Reparatie",
+      "desc": "A fost emisa o noua oferta de negociere pentru reparatia acoperisului de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        { "name": "Tichet" },
+        {
+          "name": "Reparatie"
+        },
+
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Reparatie instalatie electrica",
+      "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        { "name": "Tichet" },
+        {
+          "name": "Incasare"
+        },
+
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Facturare instalatie electrica",
+      "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        { "name": "Plata" },
+
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Reparatie",
+      "desc": "A fost emisa o noua oferta de negociere pentru reparatia acoperisului de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        { "name": "Tichet" },
+
+        {
+          "name": "Reparatie"
+        },
+
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Reparatie instalatie electrica",
+      "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        { "name": "Tichet" },
+        { "name": "Incasare" },
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    },
+    {
+      "title": "Facturare instalatie electrica",
+      "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
+      "date": "24.10.2023",
+      "tags": [
+        { "name": "Plata" },
+
+        {
+          "name": "Casa Alessia, Siriului nr 5."
+        }
+      ],
+
+      "isRead": true
+    }
+  ]
+}
