@@ -1,18 +1,18 @@
 {
   "main_buttons": [
-    { "title": "Panou de control" },
-    { "title": "Tehnic" },
-    { "title": "Imobiliare" },
-    { "title": "Furnizori" },
-    { "title": "Marketplace" },
-    { "title": "Rapoarte" },
-    { "title": "Contacte" },
-    { "title": "Templates" },
-    { "title": "Financiar" }
+    { "title": "Panou de control", "iconName": "Panel" },
+    { "title": "Financiar", "iconName": "Money" }
+    { "title": "Tehnic", "iconName": "Technical" },
+    { "title": "Imobiliare", "iconName": "Real-estate" },
+    { "title": "Furnizori", "iconName": "Suppliers" },
+    { "title": "Marketplace", "iconName": "Marketplace" },
+    { "title": "Rapoarte", "iconName": "Raports" },
+    { "title": "Contacte", "iconName": "Contacts" },
+    { "title": "Templates", "iconName": "Templates" }
   ],
   "secondary_buttons": [
-    { "title": "Calendar" },
-    { "title": "Setari" },
-    { "title": "Support & Feedback" }
+    { "title": "Calendar", "iconName": "Calendar" },
+    { "title": "Setari", "iconName": "Settings" },
+    { "title": "Support & Feedback", "iconName": "Support" }
   ]
 }

@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import PanelIcon from './PanelIcon';
 
-interface IIcons {
+interface IIconFinder {
   name: string;
 }
 
-const Icons: FC<IIcons> = ({ name }) => {
+const IconFinder: FC<IIconFinder> = ({ name }) => {
   const icons: { [key: string]: React.JSX.Element } = {
     Panel: <PanelIcon />,
   };
@@ -13,4 +13,4 @@ const Icons: FC<IIcons> = ({ name }) => {
   return icons[name];
 };
 
-export default Icons;
+export default IconFinder;

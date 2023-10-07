@@ -2,7 +2,7 @@ import { FC } from 'react';
 import navigationData from '@/locale/ro/navigationData.json';
 import Logo from '@/components/svgs/Logo';
 import Link from 'next/link';
-import Icons from './svgs/Icons';
+import IconFinder from './svgs/IconFinder';
 
 const Navigation: FC = () => {
   const { main_buttons, secondary_buttons } = navigationData;
@@ -19,7 +19,7 @@ const Navigation: FC = () => {
                 key={i}
                 className="rounded-2xl flex gap-5 w-full  px-5 py-4 pointer-events-none hover:bg-[#5F76C7] duration-300 ease-out transition-all"
               >
-                <Icons name={'Panel'}></Icons>
+                <IconFinder name={'Panel'}></IconFinder>
                 <Link
                   href={'#'}
                   key={i}
