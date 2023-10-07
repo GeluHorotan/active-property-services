@@ -3,9 +3,10 @@ import navigationData from '@ro/navigationData.json';
 import Logo from '@/components/svgs/Logo';
 import Link from 'next/link';
 import IconFinder from '@icons/IconFinder';
+import { INavigation } from '@/types/INavigation';
 
 const Navigation: FC = () => {
-  const { main_buttons, secondary_buttons } = navigationData;
+  const { main_buttons, secondary_buttons }: INavigation = navigationData;
   return (
     <nav className=" w-full h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-custom_blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
       <div className="flex flex-col items-start gap-16  w-full relative">

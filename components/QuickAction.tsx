@@ -1,23 +1,21 @@
 import { FC } from 'react';
 import IconFinder from './svgs/icons/IconFinder';
 import Button from '@components/Button';
+import { IAction } from '@/types/IActions';
 
 interface IQuickAction {
-  card: any;
+  action: IAction;
   isSingleEntry?: boolean;
 }
 
-const QuickAction: FC<IQuickAction> = ({ card, isSingleEntry }) => {
+const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
   return (
     <div className="pb-5 px-5 pt-4  bg-white rounded-[20px] flex-col gap-3 flex items-center justify-center">
       {/* Title */}
       <div className="w-full flex justify-between  items-center  ">
-        <h6 className="font-semibold">{card?.title}</h6>
+        <h6 className="font-semibold text-custom_gray-700">{action?.title}</h6>
         <div className=" justify-end flex ">
-          <IconFinder
-            name={card?.iconName}
-            className="fill-[#ccc]"
-          ></IconFinder>
+          <IconFinder name={action?.iconName} className="fill-[#ccc]" />
         </div>
       </div>
       <div
@@ -26,7 +24,7 @@ const QuickAction: FC<IQuickAction> = ({ card, isSingleEntry }) => {
         }  items-center gap-y-4   `}
       >
         {/* Cards */}
-        {card?.entries.map((entry: any, i: number) => {
+        {action?.entries.map((entry: any, i: number) => {
           return (
             <div key={i} className="   col-span-6 items-start  ">
               <div className="flex gap-1 ">
@@ -53,12 +51,11 @@ const QuickAction: FC<IQuickAction> = ({ card, isSingleEntry }) => {
           );
         })}
         {/* Footer */}
-
         <Button
           className="col-span-6  "
           icon={<IconFinder name={'Plus'} size={16} />}
         >
-          {card?.action_name}
+          {action?.action_name}
         </Button>
       </div>
     </div>
