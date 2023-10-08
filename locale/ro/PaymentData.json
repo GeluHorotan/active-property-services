@@ -6,12 +6,12 @@
     "to": "31 Iulie 2023",
     "spent_on": [
       {
-        "title": "Mentenanta si reparatii",
-        "is_prioritized": true
+        "label_title": "Mentenanta si reparatii",
+        "is_majority": true
       },
       {
-        "title": "Altele",
-        "is_prioritized": false
+        "label_title": "Altele",
+        "is_majority": false
       }
     ],
     "tabel": [
