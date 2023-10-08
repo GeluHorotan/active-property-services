@@ -1,15 +1,20 @@
 'use client';
 import { Chart as ChartJS, ArcElement, Legend } from 'chart.js';
 import { Doughnut, Pie } from 'react-chartjs-2';
-import { useState, FC } from 'react';
+import { useState, useEffect, FC } from 'react';
 import PanelHeader from '@components/PanelHeader';
 import PaymentData from '@ro/PaymentData.json';
+import { Skeleton, Spinner } from '@nextui-org/react';
 
 const Payments: FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [view, setView] = useState<string>('plati');
   const { categories, payments } = PaymentData;
 
-  ChartJS.register(ArcElement);
+  useEffect(() => {
+    ChartJS.register(ArcElement);
+    setIsLoading(false);
+  }, []);
 
   const data = {
     labels: ['Mentenanta si reparatii', 'Altele'],
@@ -21,14 +26,6 @@ const Payments: FC = () => {
         borderWidth: 0,
       },
     ],
-  };
-
-  const options = {
-    responsive: true, // Allows the chart to be responsive
-    maintainAspectRatio: false, // Prevents maintaining aspect ratio
-    width: 200, // Set the width
-    height: 200, // Set the height
-    cutoutPercentage: 70,
   };
 
   return (
@@ -65,18 +62,31 @@ const Payments: FC = () => {
                 );
               })}
             </div>
-            <div className="relative flex items-center   w-[240px] h-max ml-5  ">
-              <Doughnut
-                data={data}
-                options={{ cutout: 97, layout: { padding: 0 } }}
-                className=""
-              />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center flex-col">
-                <h6 className="font-light leading-[23px]">TOTAL</h6>
-                <h2 className="font-semibold leading-[43px]">
-                  &euro;{payments.total_spent}
-                </h2>
+            <div className="flex w-full justify-between items-end">
+              <div className="relative flex items-center bg-red-400  w-[240px] min-h-[240px] h-max ml-5  ">
+                <div className=" w-full flex items-center justify-center">
+                  {isLoading && <Spinner size="lg" />}
+                </div>
+                {!isLoading && (
+                  <>
+                    <Doughnut
+                      data={data}
+                      options={{
+                        cutout: 97,
+                        layout: { padding: 0 },
+                      }}
+                      className=""
+                    />
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center flex-col">
+                      <h6 className="font-light leading-[23px]">TOTAL</h6>
+                      <h2 className="font-semibold leading-[43px]">
+                        &euro;{payments.total_spent}
+                      </h2>
+                    </div>
+                  </>
+                )}
               </div>
+              <p>TEST</p>
             </div>
           </div>
         </div>
