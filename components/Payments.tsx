@@ -5,6 +5,7 @@ import { useState, useEffect, FC } from 'react';
 import PanelHeader from '@components/PanelHeader';
 import PaymentData from '@ro/PaymentData.json';
 import { Spinner } from '@nextui-org/react';
+import IconFinder from './svgs/icons/IconFinder';
 
 const Payments: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -89,16 +90,20 @@ const Payments: FC = () => {
               <div className="flex flex-col gap-[18px]">
                 {payments?.tabel?.map((entry, i) => {
                   return (
-                    <div key={i} className="flex items-center gap-[74px] ">
-                      <p className="text-[14px] font-medium leading-[21px]">
-                        {entry.title}
-                        {entry.sub_title && (
-                          <>
-                            {' '}
-                            <br /> {entry.sub_title}
-                          </>
-                        )}
-                      </p>
+                    <div key={i} className="flex items-center gap-[74px]  ">
+                      <div className="flex gap-[10px] items-center">
+                        <IconFinder name={entry.iconName} />
+                        <p className="text-[14px] font-medium leading-[21px]">
+                          {entry.title}
+                          {entry.sub_title && (
+                            <>
+                              {' '}
+                              <br /> {entry.sub_title}
+                            </>
+                          )}
+                        </p>
+                      </div>
+
                       <h5 className="w-full font-semibold  text-end leading-[25px] ">
                         &euro; {entry?.amount}
                       </h5>

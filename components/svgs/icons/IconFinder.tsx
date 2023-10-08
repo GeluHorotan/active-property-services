@@ -16,6 +16,9 @@ import ArrowToLeftIcon from '@icons/ArrowToLeftIcon';
 import PlusIcons from '@icons/PlusIcons';
 import PortfolioIcon from '@icons/PortfolioIcon';
 import LeasingIcon from '@icons/LeasingIcon';
+import DelayedIcon from '@icons/DelayedIcon';
+import PaidIcon from '@icons/PaidIcon';
+import ScheduledIcon from '@icons/ScheduledIcon';
 
 interface IIconFinder {
   name: string;
@@ -42,6 +45,9 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Plus: <PlusIcons size={size} className={className} />,
     Portfolio: <PortfolioIcon size={size} className={className} />,
     Leasing: <LeasingIcon size={size} className={className} />,
+    Delayed: <DelayedIcon size={size} className={className} />,
+    Paid: <PaidIcon size={size} className={className} />,
+    Scheduled: <ScheduledIcon size={size} className={className} />,
   };
 
   return icons[name];

@@ -17,16 +17,19 @@
     "tabel": [
       {
         "title": "Intarziate",
-        "amount": "325"
+        "amount": "325",
+        "iconName": "Delayed"
       },
       {
         "title": "Efectuate",
-        "amount": "1250"
+        "amount": "1250",
+        "iconName": "Paid"
       },
       {
         "title": "Programate",
         "sub_title": "(30 zile)",
-        "amount": "161"
+        "amount": "161",
+        "iconName": "Scheduled"
       }
     ]
   },
