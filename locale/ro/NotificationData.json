@@ -6,10 +6,12 @@
       "date": "24.10.2023",
       "tags": [
         {
-          "name": "Facturare"
+          "name": "Facturare",
+          "type": "bill"
         },
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
       "isRead": false,
@@ -22,10 +24,12 @@
       "date": "24.10.2023",
       "tags": [
         {
-          "name": "Reminder"
+          "name": "Reminder",
+          "type": "reminder"
         },
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
       "reminder": true,
@@ -39,13 +43,16 @@
       "date": "24.10.2023",
       "tags": [
         {
-          "name": "Tichet"
+          "name": "Tichet",
+          "type": "ticket"
         },
         {
-          "name": "Reparatie"
+          "name": "Reparatie",
+          "type": "repair"
         },
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -59,13 +66,16 @@
       "date": "24.10.2023",
       "tags": [
         {
-          "name": "Tichet"
+          "name": "Tichet",
+          "type": "ticket"
         },
         {
-          "name": "Incasare"
+          "name": "Incasare",
+          "type": "incomingMoney"
         },
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -79,11 +89,13 @@
       "date": "24.10.2023",
       "tags": [
         {
-          "name": "Plata"
+          "name": "Plata",
+          "type": "pay"
         },
 
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -96,13 +108,16 @@
       "desc": "A fost emisa o noua oferta de negociere pentru reparatia acoperisului de catre ComStalStars SRL",
       "date": "24.10.2023",
       "tags": [
-        { "name": "Tichet" },
+        { "name": "Tichet", "type": "ticket" },
+
         {
-          "name": "Reparatie"
+          "name": "Reparatie",
+          "type": "repair"
         },
 
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -115,13 +130,15 @@
       "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
       "date": "24.10.2023",
       "tags": [
-        { "name": "Tichet" },
+        { "name": "Tichet", "type": "ticket" },
         {
-          "name": "Incasare"
+          "name": "Incasare",
+          "type": "incomingMoney"
         },
 
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -134,10 +151,11 @@
       "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
       "date": "24.10.2023",
       "tags": [
-        { "name": "Plata" },
+        { "name": "Plata", "type": "pay" },
 
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -150,14 +168,16 @@
       "desc": "A fost emisa o noua oferta de negociere pentru reparatia acoperisului de catre ComStalStars SRL",
       "date": "24.10.2023",
       "tags": [
-        { "name": "Tichet" },
+        { "name": "Tichet", "type": "ticket" },
 
         {
-          "name": "Reparatie"
+          "name": "Reparatie",
+          "type": "repair"
         },
 
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -170,10 +190,12 @@
       "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
       "date": "24.10.2023",
       "tags": [
-        { "name": "Tichet" },
-        { "name": "Incasare" },
+        { "name": "Tichet", "type": "ticket" },
+
+        { "name": "Incasare", "type": "incomingMoney" },
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 
@@ -186,10 +208,11 @@
       "desc": "A fost finalizata lucrarea de reparative a instalatiei electrice  de catre ComStalStars SRL",
       "date": "24.10.2023",
       "tags": [
-        { "name": "Plata" },
+        { "name": "Plata", "type": "pay" },
 
         {
-          "name": "Casa Alessia, Siriului nr 5."
+          "name": "Casa Alessia, Siriului nr 5.",
+          "type": "street"
         }
       ],
 

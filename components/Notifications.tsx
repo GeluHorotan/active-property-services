@@ -3,6 +3,17 @@ import NotificationData from '@ro/NotificationData.json';
 import IconFinder from './svgs/icons/IconFinder';
 
 const Notifications: FC = () => {
+  const tagsType = {
+    bill: 'bg-custom_green-500 text-white',
+    street: 'bg-custom_blue-800 text-custom_gray-900',
+    reminder: 'bg-custom_purple-100 text-white',
+    pay: 'bg-custom_red-700 text-white ',
+    incomingMoney:
+      'border-[0.5px]  border-custom_gray-900 text-custom_gray-900',
+    repair: 'border-[0.5px]  border-custom_gray-900 text-custom_gray-900',
+    ticket: 'bg-custom_blue-400 text-white',
+  };
+
   const { notifications } = NotificationData;
   return (
     <div className="   col-span-7 h-full flex-col flex  ">
@@ -30,13 +41,13 @@ const Notifications: FC = () => {
           {notifications?.map((notification, i) => {
             return (
               <div
-                className="gap-[13.3px] flex items-center w-full pr-5"
+                className="gap-[13.3px] flex items-start  w-full pr-5"
                 key={i}
               >
                 <div
                   className={`w-2 h-2 ${
                     !notification.isRead ? 'bg-custom_blue-300' : 'bg-white'
-                  }  rounded-full`}
+                  }  rounded-full mt-2`}
                 />
 
                 <div className="flex flex-col gap-[9px]  w-full">
@@ -68,7 +79,9 @@ const Notifications: FC = () => {
                           return (
                             <div
                               key={i}
-                              className="py-1 px-[11px]  rounded-4xl flex items-center justify-center bg-red-400"
+                              className={`py-1 px-[11px] leading-[18px]  rounded-4xl flex items-center justify-center ${
+                                tagsType[tag.type]
+                              }`}
                             >
                               <p className="text-[12px] font-regular">
                                 {tag.name}
@@ -80,7 +93,7 @@ const Notifications: FC = () => {
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <p className="text-[12px] font-regular leading-[18px]">
+                    <p className="text-[12px] font-regular leading-[18px] text-custom_gray-700">
                       {notification.desc}
                     </p>
                     <p className="font-regular  text-[12px] leading-[18px] text-[#AFAEAE] ">
