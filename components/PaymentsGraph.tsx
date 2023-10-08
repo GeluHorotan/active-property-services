@@ -27,26 +27,35 @@ const PaymentsGraph: FC = () => {
           <div className="grid grid-cols-13 gap-[19.5px]">
             <Dropdown></Dropdown>
             <div className=" col-span-9 flex flex-col gap-[10px]">
-              <div className="flex gap-[10px]">
-                <p className="font-normal leading-[21px] text-[#0B1023] ">
-                  Venituri
-                </p>
-                <p className="font-normal leading-[21px] text-[#0B1023] ">
-                  Cheltuieli
-                </p>
-                <p className="font-normal leading-[21px] text-[#0B1023] ">
-                  Profit
-                </p>
+              <div className="flex gap-[10px] items-center">
+                <div className="flex gap-[8px] items-center">
+                  <div className="w-3 h-3 bg-custom_gray-600 rounded-full" />
+                  <p className="font-normal leading-[21px] text-[#0B1023] ">
+                    Venituri
+                  </p>
+                </div>
+                <div className="flex gap-[8px] items-center">
+                  <div className="w-3 h-3 bg-custom_purple-300 rounded-full" />
+                  <p className="font-normal leading-[21px] text-[#0B1023] ">
+                    Cheltuieli
+                  </p>
+                </div>
+                <div className="flex gap-[8px] items-center">
+                  <div className="w-3 h-3 bg-custom_gray-500 rounded-full" />
+                  <p className="font-normal leading-[21px] text-[#0B1023] ">
+                    Profit
+                  </p>
+                </div>
               </div>
-              <div className="flex gap-[15px]">
+              <div className="flex gap-[15px] items-center">
                 <p className="font-medium leading-[21px] text-custom_gray-600">
-                  Venituri - &euro;15.000
+                  Venituri - &euro; 15.000
                 </p>
                 <p className="font-medium leading-[21px] text-custom_purple-300">
-                  Cheltuieli - &euro;15.000
+                  Cheltuieli - &euro; 15.000
                 </p>
                 <p className="font-medium leading-[21px] text-custom_gray-500">
-                  Profit - &euro;6.000
+                  Profit - &euro; 6.000
                 </p>
                 <p className="font-medium leading-[21px] text-custom_green-400">
                   ROI - 8.8%
