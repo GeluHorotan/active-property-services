@@ -29,7 +29,7 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
         {action?.entries.map((entry: any, i: number) => {
           return (
             <div key={i} className="   col-span-6 items-start  ">
-              <div className="flex  ">
+              <div className="flex gap-1 ">
                 <h6
                   className={`font-semibold text-[30px]  leading-[30px] ${
                     entry.highlight
