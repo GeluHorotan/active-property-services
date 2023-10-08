@@ -15,7 +15,7 @@ const ArrowToLeftIcon: FC<IIcon> = ({ size }) => {
         transform="translate(0.5 10.5) rotate(-90)"
         fill="#3851a8"
         stroke="#3851a8"
-        stroke-width="1"
+        strokeWidth="1"
       />
     </svg>
   );
