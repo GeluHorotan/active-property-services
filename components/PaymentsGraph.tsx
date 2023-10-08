@@ -70,6 +70,9 @@ const PaymentsGraph: FC = () => {
           drawOnChartArea: true,
           drawTicks: false,
         },
+        border: {
+          display: false,
+        },
 
         ticks: {
           callback: (value, index) => {
