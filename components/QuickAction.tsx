@@ -10,7 +10,7 @@ interface IQuickAction {
 
 const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
   return (
-    <div className="pb-5 px-5 pt-4  bg-white rounded-4xl flex-col gap-3 flex items-center justify-center">
+    <div className="pb-5 px-[25px] pt-[18px]  bg-white rounded-4xl flex-col gap-3 flex items-center justify-center">
       {/* Title */}
       <div className="w-full flex justify-between  items-center  ">
         <h6 className="font-semibold text-custom_gray-700 leading-[25px]">

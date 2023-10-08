@@ -1,4 +1,36 @@
 {
+  "payments": {
+    "title": "Top categorii cheltuieli",
+    "total_spent": "161",
+    "from": "1 Iulie 2023",
+    "to": "31 Iulie 2023",
+    "spent_on": [
+      {
+        "title": "Mentenanta si reparatii",
+        "is_prioritized": true
+      },
+      {
+        "title": "Altele",
+        "is_prioritized": false
+      }
+    ],
+    "tabel": [
+      {
+        "title": "Intarziate",
+        "amount": "325"
+      },
+      {
+        "title": "Efectuate",
+        "amount": "1250"
+      },
+      {
+        "title": "Programate",
+        "sub_title": "(30 zile)",
+        "amount": "161"
+      }
+    ]
+  },
+
   "categories": [
     {
       "title": "Plati",
