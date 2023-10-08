@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className=" w-full h-full grid grid-cols-13 grid-rows-12  gap-5">
         <Actions />
-        <Notifications></Notifications>
+        <Notifications />
 
         <div className="h-[473px] bg-blue-400 col-span-6 "></div>
         {/* <div className="h-[473px] bg-blue-400 col-span-7 ">Y</div> */}

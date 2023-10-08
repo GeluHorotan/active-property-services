@@ -2,7 +2,8 @@
 import { Tooltip } from '@nextui-org/react';
 import { FC } from 'react';
 import NotificationData from '@ro/NotificationData.json';
-import IconFinder from './svgs/icons/IconFinder';
+import IconFinder from '@svgs/icons/IconFinder';
+import PanelHeader from '@components/PanelHeader';
 
 const Notifications: FC = () => {
   const tagsType = {
@@ -16,24 +17,12 @@ const Notifications: FC = () => {
     ticket: 'bg-custom_blue-400 text-white',
   };
 
-  const { notifications } = NotificationData;
+  const { notifications, categories } = NotificationData;
+
   return (
-    <div className="   col-span-7  flex-col flex  ">
+    <div className="col-span-7  flex-col flex">
       {/* Header */}
-      <div className="flex w-full gap-[5px]">
-        <div className="w-[152px] h-[43px] bg-white rounded-t-[15px] flex items-center justify-center">
-          <h5 className="font-medium leading-[25px]">Toate</h5>
-        </div>
-        <div className="w-[152px] h-[43px] bg-custom_blue-300 text-white rounded-t-[15px] flex items-center justify-center">
-          <h5 className="font-regular  leading-[25px]"> Leasing</h5>
-        </div>
-        <div className="w-[152px] h-[43px] bg-custom_blue-300 text-white rounded-t-[15px] flex items-center justify-center">
-          <h5 className="font-regular leading-[25px]">Tehnic</h5>
-        </div>
-        <div className="w-[152px] h-[43px] bg-custom_blue-300 text-white rounded-t-[15px] flex items-center justify-center">
-          <h5 className="font-regular leading-[25px]">Financiar</h5>
-        </div>
-      </div>
+      <PanelHeader categories={categories} />
       {/* Body */}
       <div className="w-full  h-[463px] flex flex-col gap-[27px] bg-white  rounded-b-4xl pt-[28px] pb-10 pl-[22.3px] pr-[30px]  ">
         <h4 className="font-semibold text-semibold leading-[27px]">
