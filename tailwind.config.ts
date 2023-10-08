@@ -108,6 +108,6 @@ const config: Config = {
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 };
 export default config;

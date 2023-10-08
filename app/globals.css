@@ -6,6 +6,11 @@
   filter: drop-shadow(0px 3px 10px rgba(74, 101, 192, 0.3));
 }
 
+.customScroll {
+  scrollbar-width: thin;
+  scrollbar-color: #4d7fff #ddd;
+}
+
 @layer base {
   /* body {
     @apply pl-[13px] py-4;

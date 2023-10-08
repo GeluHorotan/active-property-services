@@ -37,7 +37,7 @@ const Notifications: FC = () => {
         <h4 className="font-semibold text-semibold leading-[27[x]">
           Notificari
         </h4>
-        <div className="flex flex-col gap-[25px] h-full overflow-y-scroll  ">
+        <div className="flex flex-col gap-[25px] h-full overflow-y-scroll customScroll  ">
           {notifications?.map((notification, i) => {
             return (
               <div
