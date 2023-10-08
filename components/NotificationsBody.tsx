@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Tooltip } from '@nextui-org/react';
 import IconFinder from '@svgs/icons/IconFinder';
 import { INotification } from '@/types/INotifications';
+import ContentNotFound from './ContentNotFound';
 
 interface INotificationsBody {
   notifications: INotification[];
@@ -108,6 +109,9 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
             </div>
           );
         })}
+        {notifications.length === 0 && (
+          <ContentNotFound>0 notificari gasite!</ContentNotFound>
+        )}
       </div>
     </div>
   );
