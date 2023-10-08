@@ -7,10 +7,11 @@ interface IPanelHeader {
     iconName?: string | undefined;
     identifier: string;
   }[];
-  setFilterOption: React.Dispatch<React.SetStateAction<string>>;
+  setView: React.Dispatch<React.SetStateAction<string>>;
+  view: string;
 }
 
-const PanelHeader: FC<IPanelHeader> = ({ categories, setFilterOption }) => {
+const PanelHeader: FC<IPanelHeader> = ({ categories, setView, view }) => {
   return (
     <div className="flex w-full gap-[5px]">
       {categories?.map((category, i) => {
@@ -18,14 +19,22 @@ const PanelHeader: FC<IPanelHeader> = ({ categories, setFilterOption }) => {
           <div
             key={i}
             onClick={() => {
-              setFilterOption(category.identifier);
+              setView(category.identifier);
             }}
-            className="w-[152px] h-[43px] bg-blue-400 rounded-t-[15px] flex items-center gap-[6.7px] justify-center"
+            className={` ${
+              category.identifier === 'toate' ? 'font-medium' : 'font-regular'
+            } w-[152px] cursor-pointer h-[43px] bg-blue-400 rounded-t-[15px] flex items-center gap-[6.7px] justify-center`}
           >
             {category.iconName && (
               <IconFinder name={category.iconName} size={17} />
             )}
-            <h5 className="font-medium leading-[25px] text-white">
+            <h5
+              className={` ${
+                category.identifier === view
+                  ? 'font-medium text-[#0B1023]'
+                  : 'font-regular text-white'
+              }  leading-[25px] transition-all ease-in-out duration-200 `}
+            >
               {category.title}
             </h5>
           </div>

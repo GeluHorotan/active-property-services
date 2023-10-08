@@ -15,7 +15,7 @@
         }
       ],
       "isRead": false,
-      "category": "financial",
+      "category": "financiar",
       "iconName": "Money"
     },
     {
@@ -34,7 +34,7 @@
       ],
       "reminder": true,
       "isRead": false,
-      "category": "financial",
+      "category": "financiar",
       "iconName": "Money"
     },
     {
@@ -57,7 +57,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -80,7 +80,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -100,7 +100,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -122,7 +122,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -143,7 +143,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -160,7 +160,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -182,7 +182,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -200,7 +200,7 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     },
     {
@@ -217,14 +217,14 @@
       ],
 
       "isRead": true,
-      "category": "technical",
+      "category": "tehnic",
       "iconName": "Technical"
     }
   ],
   "categories": [
     {
       "title": "Toate",
-      "identifier": "all"
+      "identifier": "toate"
     },
     {
       "title": "Leasing",
@@ -234,12 +234,12 @@
     {
       "title": "Tehnic",
       "iconName": "Technical",
-      "identifier": "technical"
+      "identifier": "tehnic"
     },
     {
       "title": "Financiar",
       "iconName": "Money",
-      "identifier": "financial"
+      "identifier": "financiar"
     }
   ]
 }

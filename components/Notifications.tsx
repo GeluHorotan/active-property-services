@@ -7,7 +7,7 @@ import NotificationsBody from './NotificationsBody';
 import { INotification, INotifications } from '@/types/INotifications';
 
 const Notifications: FC = () => {
-  const [filterBy, setFilterOption] = useState<string>('all');
+  const [view, setView] = useState<string>('toate');
 
   const { notifications, categories }: INotifications = NotificationData;
 
@@ -15,7 +15,7 @@ const Notifications: FC = () => {
     notifications: INotification[],
     filterBy: string
   ) => {
-    if (filterBy === 'all') {
+    if (filterBy === 'toate') {
       return notifications;
     } else {
       return notifications.filter(
@@ -27,10 +27,10 @@ const Notifications: FC = () => {
   return (
     <div className="col-span-7  flex-col flex">
       {/* Header */}
-      <PanelHeader setFilterOption={setFilterOption} categories={categories} />
+      <PanelHeader view={view} setView={setView} categories={categories} />
       {/* Body */}
       <NotificationsBody
-        notifications={filterNotifications(notifications, filterBy)}
+        notifications={filterNotifications(notifications, view)}
       />
     </div>
   );
