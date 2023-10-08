@@ -1,10 +1,10 @@
 'use client';
-import { Chart as ChartJS, ArcElement, Legend } from 'chart.js';
-import { Doughnut, Pie } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 import { useState, useEffect, FC } from 'react';
 import PanelHeader from '@components/PanelHeader';
 import PaymentData from '@ro/PaymentData.json';
-import { Skeleton, Spinner } from '@nextui-org/react';
+import { Spinner } from '@nextui-org/react';
 
 const Payments: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -63,7 +63,7 @@ const Payments: FC = () => {
               })}
             </div>
             <div className="flex w-full justify-between items-end">
-              <div className="relative flex items-center bg-red-400  w-[240px] min-h-[240px] h-max ml-5  ">
+              <div className="relative flex items-center   w-[240px] min-h-[240px] h-max ml-5  ">
                 <div className=" w-full flex items-center justify-center">
                   {isLoading && <Spinner size="lg" />}
                 </div>
@@ -86,7 +86,26 @@ const Payments: FC = () => {
                   </>
                 )}
               </div>
-              <p>TEST</p>
+              <div className="flex flex-col gap-[18px]">
+                {payments?.tabel?.map((entry, i) => {
+                  return (
+                    <div key={i} className="flex items-center gap-[74px] ">
+                      <p className="text-[14px] font-medium leading-[21px]">
+                        {entry.title}
+                        {entry.sub_title && (
+                          <>
+                            {' '}
+                            <br /> {entry.sub_title}
+                          </>
+                        )}
+                      </p>
+                      <h5 className="w-full font-semibold  text-end leading-[25px] ">
+                        &euro; {entry?.amount}
+                      </h5>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
