@@ -40,7 +40,7 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
                   {entry.data_number}
                 </h6>
                 {entry.data_unit && (
-                  <div className="font-regular text-[10px] leading-[16px]  self-end ">
+                  <div className="font-normal text-[10px] leading-[16px]  self-end ">
                     {entry.data_unit}
                   </div>
                 )}

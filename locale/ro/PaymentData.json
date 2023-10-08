@@ -18,18 +18,21 @@
       {
         "title": "Intarziate",
         "amount": "325",
-        "iconName": "Delayed"
+        "iconName": "Delayed",
+        "type": "paid"
       },
       {
         "title": "Efectuate",
         "amount": "1250",
-        "iconName": "Paid"
+        "iconName": "Paid",
+        "type": "received"
       },
       {
         "title": "Programate",
         "sub_title": "(30 zile)",
         "amount": "161",
-        "iconName": "Scheduled"
+        "iconName": "Scheduled",
+        "type": "upcoming"
       }
     ]
   },

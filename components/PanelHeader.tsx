@@ -38,7 +38,7 @@ const PanelHeader: FC<IPanelHeader> = ({ categories, setView, view }) => {
               className={` ${
                 category.identifier === view
                   ? 'font-medium text-[#0B1023]'
-                  : 'font-regular text-white'
+                  : 'font-normal text-white'
               }  leading-[25px] transition-all ease-in-out duration-200 `}
             >
               {category.title}

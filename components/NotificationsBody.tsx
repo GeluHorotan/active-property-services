@@ -49,7 +49,7 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
                       <h5
                         className={`${
                           notification.isRead
-                            ? 'font-regular text-gray-700'
+                            ? 'font-normal text-gray-700'
                             : 'font-medium text-gray-900'
                         }  leading-[25px]`}
                       >
@@ -65,7 +65,7 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
                               tagsType[tag.type]
                             }`}
                           >
-                            <p className="text-[12px] font-regular leading-[18px]">
+                            <p className="text-[12px] font-normal leading-[18px]">
                               {tag.name}
                             </p>
                           </div>
@@ -98,10 +98,10 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
                   )}
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className="text-[12px] font-regular leading-[18px] text-custom_gray-700">
+                  <p className="text-[12px] font-normal leading-[18px] text-custom_gray-700">
                     {notification.desc}
                   </p>
-                  <p className="font-regular  text-[12px] leading-[18px] text-[#AFAEAE] ">
+                  <p className="font-normal  text-[12px] leading-[18px] text-[#AFAEAE] ">
                     {notification.date}
                   </p>
                 </div>

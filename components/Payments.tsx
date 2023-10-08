@@ -90,10 +90,19 @@ const Payments: FC = () => {
               <div className="flex flex-col gap-[18px]">
                 {payments?.tabel?.map((entry, i) => {
                   return (
-                    <div key={i} className="flex items-center gap-[74px]  ">
-                      <div className="flex gap-[10px] items-center">
+                    <div
+                      key={i}
+                      className={`flex ${
+                        entry.sub_title ? 'items-start' : 'items-center'
+                      } gap-[74px] `}
+                    >
+                      <div
+                        className={`flex gap-[10px] ${
+                          entry.sub_title ? ' items-start' : 'items-center'
+                        } `}
+                      >
                         <IconFinder name={entry.iconName} />
-                        <p className="text-[14px] font-medium leading-[21px]">
+                        <p className="text-[14px] font-normal leading-[21px]">
                           {entry.title}
                           {entry.sub_title && (
                             <>
@@ -104,7 +113,15 @@ const Payments: FC = () => {
                         </p>
                       </div>
 
-                      <h5 className="w-full font-semibold  text-end leading-[25px] ">
+                      <h5
+                        className={`w-full font-semibold  text-end leading-[25px] ${
+                          entry?.type === 'paid'
+                            ? 'text-custom_red-700'
+                            : entry?.type === 'received'
+                            ? 'text-[#079348]'
+                            : 'text-custom_gray-900'
+                        }`}
+                      >
                         &euro; {entry?.amount}
                       </h5>
                     </div>
