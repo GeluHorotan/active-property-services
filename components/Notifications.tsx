@@ -25,10 +25,11 @@ const Notifications: FC = () => {
   };
 
   return (
-    <div className="col-span-7  flex-col flex">
+    <div className="col-span-7  flex-col flex ">
       {/* Header */}
       <PanelHeader view={view} setView={setView} categories={categories} />
       {/* Body */}
+
       <NotificationsBody
         notifications={filterNotifications(notifications, view)}
       />

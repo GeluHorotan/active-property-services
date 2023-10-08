@@ -20,7 +20,7 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
   };
 
   return (
-    <div className="w-full  h-[463px] flex flex-col gap-[27px] bg-white  rounded-b-4xl pt-[28px] pb-10 pl-[22.3px] pr-[30px]  ">
+    <div className="w-full  h-[490px] flex flex-col gap-[27px] bg-white  rounded-b-4xl pt-[28px] pb-9 pl-[22.3px] pr-[30px]  ">
       <h4 className="font-semibold text-semibold leading-[27px]">Notificari</h4>
       <div className="flex flex-col gap-[25px] h-full overflow-y-scroll test">
         {notifications?.map((notification: INotification, i) => {

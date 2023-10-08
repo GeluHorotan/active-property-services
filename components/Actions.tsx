@@ -8,8 +8,8 @@ const Actions: FC = () => {
   const { quick_actions }: IQuickActions = QuickActionData;
   return (
     <div className="col-span-6  ">
-      <div className="flex items-center gap-5 ">
-        <div className=" w-full grid grid-cols-2  gap-5 items-center justify-between ">
+      <div className="flex items-center gap-5  ">
+        <div className=" w-full grid grid-cols-2   gap-5 items-center justify-between ">
           {quick_actions.map((action: IAction, i: number) => {
             return (
               <QuickAction

@@ -13,7 +13,9 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
     <div className="pb-5 px-5 pt-4  bg-white rounded-4xl flex-col gap-3 flex items-center justify-center">
       {/* Title */}
       <div className="w-full flex justify-between  items-center  ">
-        <h6 className="font-semibold text-custom_gray-700">{action?.title}</h6>
+        <h6 className="font-semibold text-custom_gray-700 leading-[25px]">
+          {action?.title}
+        </h6>
         <div className=" justify-end flex ">
           <IconFinder name={action?.iconName} className="fill-[#ccc]" />
         </div>
@@ -27,9 +29,9 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
         {action?.entries.map((entry: any, i: number) => {
           return (
             <div key={i} className="   col-span-6 items-start  ">
-              <div className="flex gap-1 ">
+              <div className="flex  ">
                 <h6
-                  className={`font-semibold text-[30px]  leading-6 ${
+                  className={`font-semibold text-[30px]  leading-[30px] ${
                     entry.highlight
                       ? 'text-custom_red-700'
                       : 'text-custom-gray-900'
@@ -38,13 +40,13 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
                   {entry.data_number}
                 </h6>
                 {entry.data_unit && (
-                  <div className="font-regular text-[10px]   self-end ">
+                  <div className="font-regular text-[10px] leading-[16px]  self-end ">
                     {entry.data_unit}
                   </div>
                 )}
               </div>
 
-              <p className="font-light text-[12px] whitespace-nowrap  ">
+              <p className="font-light text-[12px] whitespace-nowrap leading-[18px] ">
                 {entry.data_desc}
               </p>
             </div>
@@ -52,7 +54,7 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
         })}
         {/* Footer */}
         <Button
-          className="col-span-6  "
+          className="col-span-6  leading-[18px]"
           icon={<IconFinder name={'Plus'} size={16} />}
         >
           {action?.action_name}
