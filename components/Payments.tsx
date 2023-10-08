@@ -13,7 +13,6 @@ const Payments: FC = () => {
   return (
     <div className="  col-span-6 ">
       <PanelHeader categories={categories} setView={setView} view={view} />
-
       <div className="w-full h-[430px] bg-white rounded-b-4xl rounded-tr-4xl pt-[25px] pb-[48px] pl-[25px] pr-5 ">
         {view === 'plati' && <PaymentBody payments={payments}></PaymentBody>}
         {view === 'incasari' && (

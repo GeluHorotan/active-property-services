@@ -1,6 +1,7 @@
 import Actions from '@components/Actions';
 import Notifications from '@components/Notifications';
 import Payments from '@components/Payments';
+import PaymentsGraph from '@components/PaymentsGraph';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <Notifications />
 
         <Payments />
-        <div className="h-[473px] bg-white rounded-4xl col-span-7 "></div>
+        <PaymentsGraph />
         {/* <div className="h-[473px] bg-blue-400 col-span-13 w-full">Y</div> */}
       </div>
     </div>

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    {
+      "title": "Plati",
+      "identifier": "plati"
+    },
+    {
+      "title": "Portfolio",
+      "identifier": "portfolio"
+    }
+  ]
+}

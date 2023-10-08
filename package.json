@@ -19,6 +19,7 @@
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@headlessui/react": "^1.7.17",
+    "@headlessui/tailwindcss": "^0.2.0",
     "@nextui-org/react": "^2.1.13",
     "chart.js": "^4.4.0",
     "class-variance-authority": "^0.7.0",
@@ -30,6 +31,7 @@
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
+    "react-icons": "^4.11.0",
     "tailwind-merge": "^1.14.0",
     "tailwind-scrollbar": "^3.0.5",
     "tailwindcss-animate": "^1.0.7"

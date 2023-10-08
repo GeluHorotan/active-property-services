@@ -115,6 +115,7 @@ const config: Config = {
     require('tailwind-scrollbar'),
     require('tailwindcss-animate'),
     nextui(),
+    require('@headlessui/tailwindcss'),
   ],
 };
 export default config;

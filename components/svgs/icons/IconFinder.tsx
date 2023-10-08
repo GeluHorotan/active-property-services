@@ -19,6 +19,7 @@ import LeasingIcon from '@icons/LeasingIcon';
 import DelayedIcon from '@icons/DelayedIcon';
 import PaidIcon from '@icons/PaidIcon';
 import ScheduledIcon from '@icons/ScheduledIcon';
+import DownloadIcon from '@icons/DownloadIcon';
 
 interface IIconFinder {
   name: string;
@@ -48,6 +49,7 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Delayed: <DelayedIcon size={size} className={className} />,
     Paid: <PaidIcon size={size} className={className} />,
     Scheduled: <ScheduledIcon size={size} className={className} />,
+    Download: <DownloadIcon size={size} className={className} />,
   };
 
   return icons[name];
