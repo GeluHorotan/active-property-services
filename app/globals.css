@@ -6,9 +6,19 @@
   filter: drop-shadow(0px 3px 10px rgba(74, 101, 192, 0.3));
 }
 
-.customScroll {
-  scrollbar-width: thin;
-  scrollbar-color: #4d7fff #ddd;
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #414141;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c6b0bd;
+  border-radius: 4px;
+  width: 5px;
 }
 
 @layer base {

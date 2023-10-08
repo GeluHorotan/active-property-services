@@ -9,11 +9,12 @@ export default function Home() {
         <input type="text" placeholder="Cautare" className="p-2 rounded-lg" />
       </div>
 
-      <div className=" w-full h-full grid grid-cols-13  gap-5">
+      <div className=" w-full h-full grid grid-cols-13 grid-rows-12  gap-5">
         <Actions />
         <Notifications></Notifications>
+
         <div className="h-[473px] bg-blue-400 col-span-6 "></div>
-        <div className="h-[473px] bg-blue-400 col-span-7 ">Y</div>
+        {/* <div className="h-[473px] bg-blue-400 col-span-7 ">Y</div> */}
       </div>
     </div>
   );
