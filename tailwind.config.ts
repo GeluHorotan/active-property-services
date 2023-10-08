@@ -105,6 +105,9 @@ const config: Config = {
           900: '#D98200',
         },
       },
+      gridColumn: {
+        'span-16': 'span 16 / span 16',
+      },
     },
   },
   variants: {},
