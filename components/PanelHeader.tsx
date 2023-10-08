@@ -22,11 +22,17 @@ const PanelHeader: FC<IPanelHeader> = ({ categories, setView, view }) => {
               setView(category.identifier);
             }}
             className={` ${
-              category.identifier === 'toate' ? 'font-medium' : 'font-regular'
-            } w-[152px] cursor-pointer h-[43px] bg-blue-400 rounded-t-[15px] flex items-center gap-[6.7px] justify-center`}
+              category.identifier === view ? 'bg-white' : 'bg-custom_blue-300'
+            } w-[152px] cursor-pointer h-[43px]  rounded-t-[15px] flex items-center gap-[6.7px] justify-center transition-all ease-in-out duration-200`}
           >
             {category.iconName && (
-              <IconFinder name={category.iconName} size={17} />
+              <IconFinder
+                name={category.iconName}
+                className={`${
+                  category.identifier === view ? 'fill-[#0B1023]' : 'fill-white'
+                }`}
+                size={17}
+              />
             )}
             <h5
               className={` ${
