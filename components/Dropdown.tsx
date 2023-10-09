@@ -31,7 +31,7 @@ const Dropdown: FC = () => {
           >
             <Menu.Items
               className={
-                '  rounded-b-[10px] cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col '
+                '  rounded-b-[10px]  cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col '
               }
             >
               <Menu.Item>
@@ -61,7 +61,7 @@ const Dropdown: FC = () => {
                   <div
                     className={`${
                       active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer  line-clamp-1 font-normal leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
+                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
                   >
                     Complex Casa 3, Str Florilor
                   </div>
