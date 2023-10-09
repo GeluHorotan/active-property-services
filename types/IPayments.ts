@@ -13,7 +13,7 @@ export interface IPayment {
     is_majority: boolean;
   }[];
 
-  tabel: {
+  table: {
     iconName: string;
 
     title: string;

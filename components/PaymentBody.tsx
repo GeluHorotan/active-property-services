@@ -83,7 +83,7 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
             )}
           </div>
           <div className="flex flex-col gap-[18px]">
-            {payments?.tabel?.map((entry, i) => {
+            {payments?.table?.map((entry, i) => {
               return (
                 <div
                   key={i}

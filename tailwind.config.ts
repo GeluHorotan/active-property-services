@@ -106,7 +106,7 @@ const config: Config = {
         },
       },
       gridColumn: {
-        'span-16': 'span 16 / span 16',
+        'span-13': 'span 13 / span 13',
       },
     },
   },
