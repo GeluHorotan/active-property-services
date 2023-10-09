@@ -21,7 +21,7 @@ const Statistics: FC = () => {
   return (
     <div className="     col-span-7 ">
       <PanelHeader categories={categories} setView={setView} view={view} />
-      <div className="  rounded-b-4xl rounded-tr-4xl bg-white pt-[25px] pl-[25px] pr-[30px] ">
+      <div className=" h-[530px]  rounded-b-4xl rounded-tr-4xl bg-white pt-[25px] pl-[25px] pr-[30px] ">
         {view === 1 ? (
           <PaymentsGraphBody
             dropdown={dropdown}

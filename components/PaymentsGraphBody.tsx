@@ -108,7 +108,7 @@ const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
           </div>
         </div>
       </div>
-      <div className="  flex items-center justify-center h-[325px] w-full  ">
+      <div className="    w-full  ">
         <Bar data={barData} options={barOptions} />
       </div>
     </div>
