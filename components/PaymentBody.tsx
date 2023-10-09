@@ -97,7 +97,7 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
                     } `}
                   >
                     <IconFinder name={entry.iconName} />
-                    <p className="text-[14px] font-normal leading-[21px]">
+                    <span className="text-[14px] font-normal leading-[21px]">
                       {entry.title}
                       {entry.sub_title && (
                         <>
@@ -105,7 +105,7 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
                           <br /> {entry.sub_title}
                         </>
                       )}
-                    </p>
+                    </span>
                   </div>
 
                   <h5

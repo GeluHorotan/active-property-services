@@ -65,9 +65,9 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
                               tagsType[tag.type]
                             }`}
                           >
-                            <p className="text-[12px] font-normal leading-[18px]">
+                            <span className="text-[12px] font-normal leading-[18px]">
                               {tag.name}
-                            </p>
+                            </span>
                           </div>
                         );
                       })}
@@ -84,9 +84,9 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
                       showArrow={true}
                       content={
                         <>
-                          <p className="text-[12px] font-light leading-4 text-custom_gray-900">
+                          <span className="text-[12px] font-light leading-4 text-custom_gray-900">
                             Factura <br /> overdue
-                          </p>
+                          </span>
                         </>
                       }
                       placement="left"
@@ -101,9 +101,9 @@ const NotificationsBody: FC<INotificationsBody> = ({ notifications }) => {
                   <p className="text-[12px] font-normal leading-[18px] text-custom_gray-700">
                     {notification.desc}
                   </p>
-                  <p className="font-normal  text-[12px] leading-[18px] text-[#AFAEAE] ">
+                  <span className="font-normal  text-[12px] leading-[18px] text-[#AFAEAE] ">
                     {notification.date}
-                  </p>
+                  </span>
                 </div>
               </div>
             </div>

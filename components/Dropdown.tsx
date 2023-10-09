@@ -20,9 +20,9 @@ const Dropdown: FC<IDropdown> = ({ items, title }) => {
               open && 'rounded-b-none'
             } px-5 w-full py-[15px] duration-100 ease-out transition-all flex items-center justify-between rounded-[10px] ui-open:rounded-b-none border-[0.5px] bg-white border-custom_gray-700`}
           >
-            <p className="font-normal leading-[21px] text-custom_gray-400">
+            <span className="font-normal leading-[21px] text-custom_gray-400 text-[14px]">
               {title}
-            </p>
+            </span>
             <IoIosArrowDown
               className={`${open && 'rotate-180'}`}
               color="#575757"

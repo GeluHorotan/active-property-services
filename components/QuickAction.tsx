@@ -46,9 +46,9 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
                 )}
               </div>
 
-              <p className="font-light text-[12px] whitespace-nowrap leading-[18px] ">
+              <span className="font-light text-[12px] whitespace-nowrap leading-[18px] ">
                 {entry.data_desc}
-              </p>
+              </span>
             </div>
           );
         })}
