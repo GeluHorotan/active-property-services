@@ -3,7 +3,14 @@ import { FC } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { IoIosArrowDown } from 'react-icons/io';
 
-const Dropdown: FC = ({ items, title }) => {
+interface IDropdown {
+  title: string;
+  items: {
+    title: string;
+  }[];
+}
+
+const Dropdown: FC<IDropdown> = ({ items, title }) => {
   return (
     <Menu as="div" className={'relative col-span-4 origin-center '}>
       {({ open }) => (

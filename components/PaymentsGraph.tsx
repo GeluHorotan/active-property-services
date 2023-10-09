@@ -1,5 +1,6 @@
 'use client';
 import { FC, useState } from 'react';
+import { IPaymentGraph } from '@/types/IPaymentGraph';
 import PaymentGraphData from '@ro/PaymentGraphData.json';
 import PanelHeader from '@components/PanelHeader';
 import Button from '@components/Button';
@@ -19,7 +20,12 @@ import {
 
 const PaymentsGraph: FC = () => {
   const [view, setView] = useState<string>('plati');
-  const { categories, dropdown } = PaymentGraphData;
+  const {
+    categories,
+    dropdown,
+    graph_legend,
+    graph_sub_legend,
+  }: IPaymentGraph = PaymentGraphData;
 
   ChartJS.register(
     CategoryScale,
@@ -315,45 +321,48 @@ const PaymentsGraph: FC = () => {
           </div>{' '}
           {/* Spendings and Dropdown */}
           <div className="grid grid-cols-13 gap-[19.5px]">
-            <Dropdown
-              items={dropdown.entries}
-              title={dropdown.title}
-            ></Dropdown>
+            <Dropdown items={dropdown.entries} title={dropdown.title} />
             <div className=" col-span-9 flex flex-col gap-[10px]">
               <div className="flex gap-[10px] items-center">
-                <div className="flex gap-[8px] items-center">
-                  <div className="w-3 h-3 bg-custom_gray-600 rounded-full" />
-                  <p className="font-normal leading-[21px] text-[#0B1023] ">
-                    Venituri
-                  </p>
-                </div>
-                <div className="flex gap-[8px] items-center">
-                  <div className="w-3 h-3 bg-custom_purple-300 rounded-full" />
-                  <p className="font-normal leading-[21px] text-[#0B1023] ">
-                    Cheltuieli
-                  </p>
-                </div>
-                <div className="flex gap-[8px] items-center">
-                  <div className="w-3 h-3 bg-custom_gray-500 rounded-full" />
-                  <p className="font-normal leading-[21px] text-[#0B1023] ">
-                    Profit
-                  </p>
-                </div>
+                {graph_legend.map(
+                  (
+                    legend: { title: string; color: string; bg_color: string },
+                    i: number
+                  ) => {
+                    return (
+                      <div key={i} className="flex gap-[8px] items-center">
+                        <div
+                          className={`w-3 h-3 ${legend.bg_color} rounded-full `}
+                        />
+                        <p
+                          className={`font-normal leading-[21px] text-[${legend.color}]`}
+                        >
+                          {legend.title}
+                        </p>
+                      </div>
+                    );
+                  }
+                )}
               </div>
               {/* Spendings */}
               <div className="flex gap-[15px] items-center ">
-                <p className="font-medium leading-[21px] text-custom_gray-600">
-                  Venituri - &euro; 15.000
-                </p>
-                <p className="font-medium leading-[21px] text-custom_purple-300">
-                  Cheltuieli - &euro; 15.000
-                </p>
-                <p className="font-medium leading-[21px] text-custom_gray-500">
-                  Profit - &euro; 6.000
-                </p>
-                <p className="font-medium leading-[21px] text-custom_green-400">
-                  ROI - 8.8%
-                </p>
+                {graph_sub_legend?.map(
+                  (
+                    sub_legend: {
+                      text: string;
+                      color: string;
+                    },
+                    i: number
+                  ) => {
+                    return (
+                      <p
+                        key={i}
+                        className={`${sub_legend.color} font-medium leading-[21px] `}
+                        dangerouslySetInnerHTML={{ __html: sub_legend.text }}
+                      ></p>
+                    );
+                  }
+                )}
               </div>
             </div>
           </div>

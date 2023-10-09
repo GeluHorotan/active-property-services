@@ -20,5 +20,40 @@
       { "title": "  Complex Casa, Str Florilor" },
       { "title": "   Proprietate" }
     ]
-  }
+  },
+  "graph_legend": [
+    {
+      "title": "Venituri",
+      "color": "#0B1023",
+      "bg_color": "bg-custom_gray-600"
+    },
+    {
+      "title": "Cheltuieli",
+      "color": "#0B1023",
+      "bg_color": "bg-custom_purple-300"
+    },
+    {
+      "title": "Profit",
+      "color": "#0B1023",
+      "bg_color": "bg-custom_gray-500"
+    }
+  ],
+  "graph_sub_legend": [
+    {
+      "text": "Venituri - &euro; 15.000",
+      "color": "text-custom_gray-600"
+    },
+    {
+      "text": "Cheltuieli - &euro; 15.000",
+      "color": "text-custom_purple-300"
+    },
+    {
+      "text": "Profit - &euro; 6.000",
+      "color": "text-custom_gray-500"
+    },
+    {
+      "text": "ROI - 8.8%",
+      "color": "text-custom_green-400"
+    }
+  ]
 }
