@@ -4,9 +4,9 @@ import { IPaymentGraph } from '@/types/IPaymentGraph';
 import PaymentGraphData from '@ro/PaymentGraphData.json';
 import PanelHeader from '@components/PanelHeader';
 
-import PaymentsBody from '@components/PaymentsBody';
+import PaymentsGraphBody from '@components/PaymentsGraphBody';
 
-const PaymentsGraph: FC = () => {
+const Statistics: FC = () => {
   const [view, setView] = useState<number>(1);
   const {
     categories,
@@ -21,7 +21,7 @@ const PaymentsGraph: FC = () => {
     <div className=" h-full  col-span-7 ">
       <PanelHeader categories={categories} setView={setView} view={view} />
       {view === 1 ? (
-        <PaymentsBody
+        <PaymentsGraphBody
           dropdown={dropdown}
           graph_legend={graph_legend}
           graph_sub_legend={graph_sub_legend}
@@ -35,4 +35,4 @@ const PaymentsGraph: FC = () => {
   );
 };
 
-export default PaymentsGraph;
+export default Statistics;

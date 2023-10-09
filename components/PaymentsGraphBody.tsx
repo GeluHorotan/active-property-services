@@ -16,7 +16,7 @@ import {
   Tooltip,
 } from 'chart.js';
 
-interface IPaymentsBody {
+interface IPaymentsGraphBody {
   dropdown: IDropdown;
   graph_legend: {
     title: string;
@@ -34,7 +34,7 @@ interface IPaymentsBody {
   };
 }
 
-const PaymentsBody: FC<IPaymentsBody> = ({
+const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
   dropdown,
   graph_legend,
   graph_sub_legend,
@@ -117,4 +117,4 @@ const PaymentsBody: FC<IPaymentsBody> = ({
   );
 };
 
-export default PaymentsBody;
+export default PaymentsGraphBody;
