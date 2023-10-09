@@ -8,5 +8,17 @@
       "title": "Portfolio",
       "identifier": "portfolio"
     }
-  ]
+  ],
+  "dropdown": {
+    "title": "Proprietate",
+    "entries": [
+      {
+        "title": "Complex Casa 1"
+      },
+      { "title": "Complex Casa 2" },
+      { "title": "Complex Casa 3, Str Florilor" },
+      { "title": "  Complex Casa, Str Florilor" },
+      { "title": "   Proprietate" }
+    ]
+  }
 }

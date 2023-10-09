@@ -19,7 +19,7 @@ import {
 
 const PaymentsGraph: FC = () => {
   const [view, setView] = useState<string>('plati');
-  const { categories } = PaymentGraphData;
+  const { categories, dropdown } = PaymentGraphData;
 
   ChartJS.register(
     CategoryScale,
@@ -315,7 +315,10 @@ const PaymentsGraph: FC = () => {
           </div>{' '}
           {/* Spendings and Dropdown */}
           <div className="grid grid-cols-13 gap-[19.5px]">
-            <Dropdown></Dropdown>
+            <Dropdown
+              items={dropdown.entries}
+              title={dropdown.title}
+            ></Dropdown>
             <div className=" col-span-9 flex flex-col gap-[10px]">
               <div className="flex gap-[10px] items-center">
                 <div className="flex gap-[8px] items-center">
