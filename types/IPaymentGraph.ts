@@ -10,6 +10,11 @@ export interface IPaymentGraph {
     text: string;
     color: string;
   }[];
+  title: string;
+  button: {
+    text: string;
+    iconName: string;
+  };
 }
 
 export interface Category {
