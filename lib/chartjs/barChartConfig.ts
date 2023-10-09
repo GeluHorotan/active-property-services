@@ -103,7 +103,7 @@ export const barOptions: any = {
           size: 14,
           weight: '300',
         },
-        padding: 10,
+        // padding: 20,
         crossAlign: 'start',
         callback: (value: number, index: number) => {
           if (index % 2 === 0) {

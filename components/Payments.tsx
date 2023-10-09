@@ -13,8 +13,8 @@ const Payments: FC = () => {
   return (
     <div className="  col-span-6 ">
       <PanelHeader categories={categories} setView={setView} view={view} />
-      <div className="w-full h-[430px] bg-white rounded-b-4xl rounded-tr-4xl pt-[25px] pb-[48px] pl-[25px] pr-5 ">
-        {view === 1 && <PaymentBody payments={payments}></PaymentBody>}
+      <div className="w-full  bg-white rounded-b-4xl  rounded-tr-4xl pt-[25px] pb-[48px] pl-[25px] pr-5 ">
+        {view === 1 && <PaymentBody payments={payments} />}
         {view === 2 && (
           <ContentNotFound className="w-full  h-full items-center flex justify-center">
             We&apos;re working on this, please be patient.

@@ -29,7 +29,7 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
     ],
   };
   return (
-    <div className="w-full gap-[15px] flex flex-col   h-full ">
+    <div className="w-full gap-[15px] flex flex-col  ">
       <div className=" w-full flex items-center justify-between">
         <h4 className="font-semibold leading-[27px]">{payments?.title}</h4>
         <div className="flex items-center justify-center gap-[10px]">
@@ -58,8 +58,8 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
             );
           })}
         </div>
-        <div className="flex w-full justify-between items-end">
-          <div className="relative flex items-center   w-[240px] min-h-[240px] h-max ml-5  ">
+        <div className="flex w-full justify-between items-end ">
+          <div className="relative flex items-center   w-[240px] min-h-[280px] h-max ml-5  ">
             <div className=" w-full flex items-center justify-center">
               {isLoading && <Spinner size="lg" />}
             </div>
@@ -68,7 +68,7 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
                 <Doughnut
                   data={data}
                   options={{
-                    cutout: 97,
+                    cutout: 95,
                     layout: { padding: 0 },
                   }}
                   className=""
