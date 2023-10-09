@@ -38,7 +38,7 @@ const Dropdown: FC<IDropdown> = ({ items, title }) => {
           >
             <Menu.Items
               className={
-                '  rounded-b-[10px]  cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col '
+                '  rounded-b-[10px] [&>*:last-child]:rounded-b-[10px] cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col '
               }
             >
               {items?.map((item, i) => {
