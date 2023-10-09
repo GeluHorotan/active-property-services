@@ -19,7 +19,8 @@ export interface IPaymentGraph {
 
 export interface Category {
   title: string;
-  identifier: string;
+  identifier?: string;
+  filterBy: number;
 }
 
 export interface Dropdown {

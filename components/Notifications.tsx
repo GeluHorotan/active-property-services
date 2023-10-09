@@ -7,19 +7,19 @@ import NotificationsBody from './NotificationsBody';
 import { INotification, INotifications } from '@/types/INotifications';
 
 const Notifications: FC = () => {
-  const [view, setView] = useState<string>('toate');
+  const [view, setView] = useState<number>(1);
 
   const { notifications, categories }: INotifications = NotificationData;
 
   const filterNotifications = (
     notifications: INotification[],
-    filterBy: string
+    filterBy: string | number
   ) => {
-    if (filterBy === 'toate') {
+    if (filterBy === 1) {
       return notifications;
     } else {
       return notifications.filter(
-        (notification: INotification) => notification.category === filterBy
+        (notification: INotification) => notification.filterBy === filterBy
       );
     }
   };

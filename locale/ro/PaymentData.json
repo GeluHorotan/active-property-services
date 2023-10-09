@@ -40,12 +40,12 @@
   "categories": [
     {
       "title": "Plati",
-      "identifier": "plati"
+      "filterBy": 1
     },
     {
       "title": "Incasari",
 
-      "identifier": "incasari"
+      "filterBy": 2
     }
   ]
 }

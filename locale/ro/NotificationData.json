@@ -15,7 +15,8 @@
         }
       ],
       "isRead": false,
-      "category": "financiar",
+
+      "filterBy": 4,
       "iconName": "Money"
     },
     {
@@ -34,7 +35,8 @@
       ],
       "reminder": true,
       "isRead": false,
-      "category": "financiar",
+
+      "filterBy": 4,
       "iconName": "Money"
     },
     {
@@ -58,6 +60,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -81,6 +84,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -101,6 +105,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -123,6 +128,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -144,6 +150,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -161,6 +168,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -182,6 +190,7 @@
       ],
 
       "isRead": true,
+      "filterBy": 3,
       "category": "tehnic",
       "iconName": "Technical"
     },
@@ -201,6 +210,7 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     },
     {
@@ -218,28 +228,29 @@
 
       "isRead": true,
       "category": "tehnic",
+      "filterBy": 3,
       "iconName": "Technical"
     }
   ],
   "categories": [
     {
       "title": "Toate",
-      "identifier": "toate"
+      "filterBy": 1
     },
     {
       "title": "Leasing",
       "iconName": "RealEstate",
-      "identifier": "leasing"
+      "filterBy": 2
     },
     {
       "title": "Tehnic",
       "iconName": "Technical",
-      "identifier": "tehnic"
+      "filterBy": 3
     },
     {
       "title": "Financiar",
       "iconName": "Money",
-      "identifier": "financiar"
+      "filterBy": 4
     }
   ]
 }

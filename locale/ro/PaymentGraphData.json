@@ -3,11 +3,13 @@
   "categories": [
     {
       "title": "Plati",
-      "identifier": "plati"
+
+      "filterBy": 1
     },
     {
       "title": "Portfolio",
-      "identifier": "portfolio"
+
+      "filterBy": 2
     }
   ],
   "dropdown": {

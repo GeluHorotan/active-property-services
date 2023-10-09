@@ -14,12 +14,13 @@ export interface INotification {
   }[];
   isRead: boolean;
   reminder?: boolean;
-  category: string;
+
   iconName: string;
+  filterBy: number;
 }
 
 export interface ICategory {
   title: string;
   iconName?: string;
-  identifier: string;
+  filterBy: number;
 }

@@ -1,6 +1,6 @@
 export interface IPayments {
   payments: IPayment;
-  categories: { title: string; identifier: string }[];
+  categories: { title: string; filterBy: number }[];
 }
 
 export interface IPayment {
