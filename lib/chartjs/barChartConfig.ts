@@ -74,6 +74,7 @@ export const barOptions: any = {
       annotations: [...intersectionAnnotations, ...intersectionAnnotations2],
     },
   },
+
   categoryPercentage: 0.8,
   barPercentage: 0.7,
   offset: {
@@ -142,6 +143,7 @@ export const barData = {
       label: 'Data 1',
       data: data1,
       backgroundColor: '#838FDE',
+      hoverBackgroundColor: '#838FDE',
     },
     {
       label: 'Data 2',
@@ -150,11 +152,16 @@ export const barData = {
         return [Math.min(value1[1], value3), Math.max(value1[1], value3)];
       }),
       backgroundColor: '#FF6880',
+      hoverBackgroundColor: '#FF6880',
     },
     {
       label: 'Data 3',
       data: data3,
       backgroundColor: (context: any) => {
+        const value = context.dataset.data[context.dataIndex][1];
+        return value >= 0 ? '#888888' : '#FF0000';
+      },
+      hoverBackgroundColor: (context: any) => {
         const value = context.dataset.data[context.dataIndex][1];
         return value >= 0 ? '#888888' : '#FF0000';
       },

@@ -5,6 +5,7 @@ import { Doughnut } from 'react-chartjs-2';
 import { Spinner } from '@nextui-org/react';
 import IconFinder from './svgs/icons/IconFinder';
 import { IPayment } from '@/types/IPayments';
+import { doughnutDataset } from '@lib/chartjs/doughnutChartConfig';
 
 interface IPaymentBody {
   payments: IPayment;
@@ -17,17 +18,6 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
     setIsLoading(false);
   }, []);
 
-  const data = {
-    labels: ['Mentenanta si reparatii', 'Altele'],
-    datasets: [
-      {
-        data: [100, 500],
-
-        backgroundColor: ['#ECECEC', '#838FDE'],
-        borderWidth: 0,
-      },
-    ],
-  };
   return (
     <div className="w-full gap-[15px] flex flex-col  ">
       <div className=" w-full flex items-center justify-between">
@@ -68,10 +58,11 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
           <div className="flex w-full justify-between items-end ">
             <div className="relative flex items-center   w-[240px] min-h-[280px] h-max ml-5  ">
               <Doughnut
-                data={data}
+                data={doughnutDataset}
                 options={{
                   cutout: 95,
                   layout: { padding: 0 },
+                  events: [],
                 }}
                 className=""
               />
