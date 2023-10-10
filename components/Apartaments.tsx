@@ -203,7 +203,10 @@ const Apartaments: FC = () => {
             {/* Table */}
             <table className=" w-full    ">
               {/* Thead only one */}
-              <TabelHead />
+              <TabelHead
+                setApartaments={setApartaments}
+                tabel_data={tabel_data}
+              ></TabelHead>
               {/* Tbody - I need this multiple times */}
               {apartaments?.map((tbody, i) => {
                 return (

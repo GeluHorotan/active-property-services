@@ -15,7 +15,6 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
   activeApartament,
   fixedHead,
 }) => {
-  console.log(entries);
   return (
     <div className="flex flex-col items-start  w-[23%] ">
       <div className="text-left h-[75px] bg-[#F6F6F6]  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal customShadow">
