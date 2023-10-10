@@ -16,6 +16,9 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
   const [sortOrders, setSortOrders] = useState<SortOrders>({
     status: 'ascending',
     name: 'ascending',
+    type: 'ascending',
+    owner: 'ascending',
+    tenant: 'ascending',
   });
 
   const toggleSortOrder = (column: string) => {
@@ -50,7 +53,13 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
         >
           <div className="flex gap-[10px] items-center">
             Status
-            <IoIosArrowDown className={``} size={16} color="#4C5870" />
+            <IoIosArrowDown
+              size={16}
+              color="#4C5870"
+              className={`${
+                sortOrders['status'] === 'ascending' ? '' : 'rotate-180'
+              }`}
+            />
           </div>
         </th>
         <th
@@ -59,7 +68,13 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
         >
           <div className="flex gap-[10px] items-center">
             Nume
-            <IoIosArrowDown className={``} size={16} color="#4C5870" />
+            <IoIosArrowDown
+              className={`${
+                sortOrders['name'] === 'ascending' ? '' : 'rotate-180'
+              }`}
+              size={16}
+              color="#4C5870"
+            />
           </div>
         </th>
         <th className="text-left    text-[#4C5870] leading-[21px] text-[14px] font-normal pl-5 pr-[80px] ">
@@ -74,7 +89,13 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
         >
           <div className="flex gap-[10px] items-center">
             Tip Prop.
-            <IoIosArrowDown className={``} size={16} color="#4C5870" />
+            <IoIosArrowDown
+              className={`${
+                sortOrders['type'] === 'ascending' ? '' : 'rotate-180'
+              }`}
+              size={16}
+              color="#4C5870"
+            />
           </div>
         </th>
         <th
@@ -83,7 +104,13 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
         >
           <div className="flex gap-[10px] items-center">
             Proprietar
-            <IoIosArrowDown className={``} size={16} color="#4C5870" />
+            <IoIosArrowDown
+              className={`${
+                sortOrders['owner'] === 'ascending' ? '' : 'rotate-180'
+              }`}
+              size={16}
+              color="#4C5870"
+            />
           </div>
         </th>
         <th className="text-left  text-[#4C5870] leading-[21px] text-[14px] font-normal    px-[23px] ">
@@ -95,7 +122,13 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
         >
           <div className="flex gap-[10px] items-center">
             Chirias
-            <IoIosArrowDown className={``} size={16} color="#4C5870" />
+            <IoIosArrowDown
+              className={`${
+                sortOrders['tenant'] === 'ascending' ? '' : 'rotate-180'
+              }`}
+              size={16}
+              color="#4C5870"
+            />
           </div>
         </th>
         <th className="text-left text-[#4C5870] leading-[21px] text-[14px] font-normal  pl-5 pr-[109px] ">
