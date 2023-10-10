@@ -93,7 +93,7 @@ const Apartaments: FC = () => {
             </Button>
             <Button
               isContentNotFound
-              className="text-[16px] border-[0.5px] border-custom_gray-700   rounded-[10px] items-center  py-[14px] px-[28px] leading-[25px]  font-normal gap-[8.5px] text-custom_gray-700"
+              className="text-[16px] border-[0.5px] border-custom_gray-700   rounded-[10px] items-center  py-[14px] px-[41px] leading-[25px]  font-normal gap-[8.5px] text-custom_gray-700"
             >
               <IconFinder
                 name="Download"
