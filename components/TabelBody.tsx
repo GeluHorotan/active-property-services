@@ -24,7 +24,7 @@ const TabelBody: FC<ITabelBody> = ({ data }) => {
     <tbody className="  border-t-[1px] border-b-[1px] border-[#EAEEF7]">
       <tr className="h-[100px] ">
         <td className=" whitespace-nowrap p-5">
-          <div className="bg-custom_green-50 px-[15px] flex items-center justify-start py-[6px] rounded-[16px] gap-[7px]">
+          <div className="bg-custom_green-50 px-[15px] flex items-center justify-start w-max py-[6px] rounded-[16px] gap-[7px]">
             <span className="w-2 h-2 bg-custom_green-600 rounded-full" />
             <span className="text-[14px] font-normal leading-[21px] text-custom_green-600">
               {status}
