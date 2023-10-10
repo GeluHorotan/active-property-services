@@ -43,7 +43,7 @@ const TabelBody: FC<ITabelBody> = ({
       }}
     >
       <tr className="h-[100px] ">
-        <td className=" whitespace-nowrap p-5">
+        <td className=" whitespace-nowrap pl-8 p-5">
           <div
             className={`${
               status === 'Inchiriat'
@@ -74,16 +74,15 @@ const TabelBody: FC<ITabelBody> = ({
         </td>
         <td className="text-[14px] font-medium leading-[21px] text-[#0B1023] whitespace-nowrap p-5">
           {address}
+          <span className="pl-[10px]"> {number}</span>
         </td>
-        <td className="text-[14px] font-medium leading-[21px] text-[#0B1023] whitespace-nowrap p-5">
-          {number}
-        </td>
-        <td className="  whitespace-nowrap p-5">
+
+        <td className="  whitespace-nowrap ">
           <span className="text-[14px] font-medium text-custom_blue-500  rounded-2xl   leading-[21px]">
             {city}
           </span>
         </td>
-        <td className=" p-5">
+        <td className=" ">
           <span
             className={` ${
               type === 'Apartament'
@@ -99,8 +98,8 @@ const TabelBody: FC<ITabelBody> = ({
             {owner}
           </span>
         </td>
-        <td className=" whitespace-nowrap  w-max  ">
-          <div className="flex items-center gap-[6px]">
+        <td className=" whitespace-nowrap  w-max  px-[23px] ">
+          <div className="flex items-center w-full gap-[6px]">
             {tickets?.map((ticket: any, i: number) => {
               return (
                 <div
