@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import IconFinder from './svgs/icons/IconFinder';
 import { IoIosArrowDown } from 'react-icons/io';
 
 const TabelHead: FC = () => {

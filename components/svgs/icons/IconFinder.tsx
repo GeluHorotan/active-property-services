@@ -25,6 +25,7 @@ import SMobileIcon from '@icons/SMobileIcon';
 import MailIcon from '@icons/MailIcon';
 import LinkIcon from '@icons/LinkIcon';
 import PaperworkIcon from '@icons/PaperworkIcon';
+import LongArrowIcon from '@icons/LongArrowIcon';
 
 interface IIconFinder {
   name: string;
@@ -60,6 +61,7 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Mail: <MailIcon size={size} className={className} />,
     Link: <LinkIcon size={size} className={className} />,
     Paperwork: <PaperworkIcon size={size} className={className} />,
+    LongArrow: <LongArrowIcon size={size} className={className} />,
   };
 
   return icons[name];

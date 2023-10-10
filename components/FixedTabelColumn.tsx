@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import IconFinder from '@icons/IconFinder';
+
 interface IFixedTabelColumn {
   fixedColumn: any;
   setActiveApartament: React.Dispatch<React.SetStateAction<number>>;
@@ -14,7 +16,10 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
   return (
     <div className="flex flex-col items-start  w-[23%] ">
       <div className="text-left h-[75px] bg-[#F6F6F6]  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal customShadow">
-        {fixedColumn.head_title}
+        <div className="flex gap-[21px] items-center">
+          {fixedColumn.head_title}
+          <IconFinder name={'LongArrow'}></IconFinder>
+        </div>
       </div>
       {fixedColumn?.entries.map((entry: any, i: number) => {
         return (
