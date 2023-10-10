@@ -179,6 +179,9 @@ const Apartaments: FC = () => {
         </div>
         <div className="flex  ">
           <FixedTabelColumn
+            resetState={resetState}
+            setApartaments={setApartaments}
+            tabel_data={tabel_data}
             setActiveApartament={setActiveApartament}
             activeApartament={activeApartament}
             fixedHead={apartaments_data.fixed_head}

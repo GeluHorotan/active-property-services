@@ -1,4 +1,4 @@
-import { IIcon } from '@.types/IIcon';
+import { IIcon } from '@/types/IIcon';
 import { FC } from 'react';
 
 const LongArrowIcon: FC<IIcon> = ({ size, className }) => {

@@ -1,26 +1,73 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import IconFinder from '@icons/IconFinder';
 
 interface IFixedTabelColumn {
+  tabel_data: any;
+  setApartaments: React.Dispatch<React.SetStateAction<any>>;
+  resetState: () => void;
   entries: any;
   setActiveApartament: React.Dispatch<React.SetStateAction<number>>;
   activeApartament: number;
   fixedHead: string;
 }
 
+interface SortOrders {
+  title: 'ascending' | 'descending';
+
+  [column: string]: 'ascending' | 'descending';
+}
 const FixedTabelColumn: FC<IFixedTabelColumn> = ({
+  tabel_data,
+  setApartaments,
+  resetState,
   entries,
   setActiveApartament,
   activeApartament,
   fixedHead,
 }) => {
+  const [sortOrders, setSortOrders] = useState<SortOrders>({
+    title: 'ascending',
+  });
+
+  const toggleSortOrder = (column: string) => {
+    setSortOrders((prevSortOrders) => ({
+      ...prevSortOrders,
+      [column]:
+        prevSortOrders[column] === 'ascending' ? 'descending' : 'ascending',
+    }));
+  };
+
+  const handleSortClick = (column: string) => {
+    toggleSortOrder(column);
+
+    resetState();
+
+    const sortedData = [...tabel_data].sort((a, b) => {
+      const valueA = a[column].toLowerCase();
+      const valueB = b[column].toLowerCase();
+      const sortOrder = sortOrders[column] === 'ascending' ? 1 : -1;
+
+      return sortOrder * valueA.localeCompare(valueB);
+    });
+
+    setApartaments(sortedData);
+  };
+
   return (
     <div className="flex flex-col items-start  w-[23%] ">
-      <div className="text-left h-[75px] bg-[#F6F6F6]  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal customShadow">
-        <div className="flex gap-[21px] items-center">
+      <div
+        className="text-left h-[75px] bg-[#F6F6F6] cursor-pointer  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal customShadow "
+        onClick={() => handleSortClick('title')}
+      >
+        <div className="flex gap-[21px] items-center ">
           {fixedHead}
-          <IconFinder name={'LongArrow'}></IconFinder>
+          <IconFinder
+            name={'LongArrow'}
+            className={`${
+              sortOrders['title'] === 'ascending' ? '' : 'rotate-180'
+            }`}
+          ></IconFinder>
         </div>
       </div>
       {entries?.map((entry: any, i: number) => {

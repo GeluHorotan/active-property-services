@@ -10,6 +10,7 @@ interface ITabelHead {
 interface SortOrders {
   status: 'ascending' | 'descending';
   name: 'ascending' | 'descending';
+
   [column: string]: 'ascending' | 'descending';
 }
 
