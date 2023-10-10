@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Providers>
-          <div className="pl-3 pr-[71px] bg-custom_gray-300 pb-96 pt-2 w-full h-full flex items-start gap-6">
+          <div className="pl-3 pr-[71px] bg-custom_gray-300 pb-96 pt-2 w-full h-full flex items-start gap-6 ">
             <header className="min-h-screen h-screen w-[15%] ">
               <Navigation />
             </header>
