@@ -13,19 +13,27 @@ import ApartamentData from '@ro/ApartamentData.json';
 import Dropdown from './Dropdown';
 import Button from './Button';
 import IconFinder from './svgs/icons/IconFinder';
+import {
+  IApartament,
+  IApartamentsData,
+  IFilterByOwner,
+  IFilterByProperty,
+  IFilterByStatus,
+  IFilterByType,
+  ITabelData,
+} from '@/types/IApartament';
 
 const Apartaments: FC = () => {
-  const { apartaments_data } = ApartamentData;
+  const { apartaments_data }: IApartament = ApartamentData;
   const {
     tabel_data,
     filter_by_status,
     filter_by_owner,
     filter_by_type,
-    filter_by_property,
-    // dropdown_default_values,
-  } = apartaments_data;
+    filter_by_property, // dropdown_default_values,
+  }: IApartamentsData = apartaments_data;
 
-  const [apartaments, setApartaments] = useState(tabel_data);
+  const [apartaments, setApartaments] = useState<ITabelData[]>(tabel_data);
 
   const [activeStatus, setActiveStatus] = useState<number>(1);
   // const [activeProperty, setActiveProperty] = useState<string>(
@@ -85,7 +93,7 @@ const Apartaments: FC = () => {
       <div className="w-full flex flex-col ">
         <div className="w-full  p-5 flex gap-[15px]">
           <div className="flex [&>*:last-child]:rounded-r-[10px] [&>*:first-child]:rounded-l-[10px]">
-            {filter_by_status?.map((filter, i) => {
+            {filter_by_status?.map((filter: IFilterByStatus, i: number) => {
               return (
                 <div
                   key={i}
@@ -117,32 +125,34 @@ const Apartaments: FC = () => {
           </div>
           <div className="items-center w-full flex gap-5 ">
             <Dropdown isOverflow title={'Proprietate'}>
-              {filter_by_property?.map((property, i) => {
-                return (
-                  <Menu.Item key={i}>
-                    {({ active }) => (
-                      <div
-                        onClick={() => {
-                          setActiveStatus(1);
-                          // setActiveProperty(property?.name);
-                          const filtered = tabel_data?.filter((apartament) =>
-                            apartament.name.includes(property.identifier)
-                          );
-                          setApartaments(filtered);
-                        }}
-                        className={`${
-                          active && 'bg-[#F1EFFD]'
-                        }  text-[14px] cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap  font-normal   leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                      >
-                        {property?.name}
-                      </div>
-                    )}
-                  </Menu.Item>
-                );
-              })}
+              {filter_by_property?.map(
+                (property: IFilterByProperty, i: number) => {
+                  return (
+                    <Menu.Item key={i}>
+                      {({ active }) => (
+                        <div
+                          onClick={() => {
+                            setActiveStatus(1);
+                            // setActiveProperty(property?.name);
+                            const filtered = tabel_data?.filter((apartament) =>
+                              apartament.name.includes(property.identifier)
+                            );
+                            setApartaments(filtered);
+                          }}
+                          className={`${
+                            active && 'bg-[#F1EFFD]'
+                          }  text-[14px] cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap  font-normal   leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
+                        >
+                          {property?.name}
+                        </div>
+                      )}
+                    </Menu.Item>
+                  );
+                }
+              )}
             </Dropdown>
             <Dropdown isOverflow title={'Proprietar'}>
-              {filter_by_owner?.map((owner, i) => {
+              {filter_by_owner?.map((owner: IFilterByOwner, i: number) => {
                 return (
                   <Menu.Item key={i}>
                     {({ active }) => (
@@ -168,7 +178,7 @@ const Apartaments: FC = () => {
               })}
             </Dropdown>
             <Dropdown title={'Tip Proprietate'}>
-              {filter_by_type?.map((type, i) => {
+              {filter_by_type?.map((type: IFilterByType, i: number) => {
                 return (
                   <Menu.Item key={i}>
                     {({ active }) => (
@@ -193,17 +203,6 @@ const Apartaments: FC = () => {
                   </Menu.Item>
                 );
               })}
-              <Menu.Item>
-                {({ active }) => (
-                  <div
-                    className={`${
-                      active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                  >
-                    Casa
-                  </div>
-                )}
-              </Menu.Item>
             </Dropdown>
           </div>
         </div>
@@ -237,7 +236,7 @@ const Apartaments: FC = () => {
                 tabel_data={tabel_data}
               />
               {/* Tbody - I need this multiple times */}
-              {apartaments?.map((tbody, i) => {
+              {apartaments?.map((tbody: ITabelData, i: number) => {
                 return (
                   <TabelBody
                     setActiveApartament={setActiveApartament}

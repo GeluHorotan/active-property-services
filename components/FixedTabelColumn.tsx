@@ -1,12 +1,15 @@
 import { FC, useState } from 'react';
 
 import IconFinder from '@icons/IconFinder';
+import { ITabelData } from '@/types/IApartament';
 
 interface IFixedTabelColumn {
+  // To be fixed later!!!  ITabelData[];
+
   tabel_data: any;
-  setApartaments: React.Dispatch<React.SetStateAction<any>>;
+  setApartaments: React.Dispatch<React.SetStateAction<ITabelData[]>>;
   resetState: () => void;
-  entries: any;
+  entries: { title: string; sub_title: string; identifier: number }[];
   setActiveApartament: React.Dispatch<React.SetStateAction<number>>;
   activeApartament: number;
   fixedHead: string;

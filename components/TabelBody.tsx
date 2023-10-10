@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import IconFinder from './svgs/icons/IconFinder';
+import { IContact, IPhone, ITabelData, ITicket } from '@/types/IApartament';
 
 interface ITabelBody {
-  data: any;
+  data: ITabelData;
   setActiveApartament: React.Dispatch<React.SetStateAction<number>>;
   activeApartament: number;
 }
@@ -100,7 +101,7 @@ const TabelBody: FC<ITabelBody> = ({
         </td>
         <td className=" whitespace-nowrap  w-max  px-[23px] ">
           <div className="flex items-center w-full gap-[6px]">
-            {tickets?.map((ticket: any, i: number) => {
+            {tickets?.map((ticket: ITicket, i: number) => {
               return (
                 <div
                   key={i}
@@ -132,23 +133,21 @@ const TabelBody: FC<ITabelBody> = ({
         </td>
         <td className=" whitespace-nowrap p-5">
           <div className="flex flex-col  gap-[5px]">
-            {phone?.map(
-              (ph: { number: string; iconName: string }, i: number) => {
-                return (
-                  <div key={i} className="flex items-center gap-[10px]">
-                    <IconFinder name={ph.iconName} />
-                    <span className="font-normal text-[14px] leading-[21px] text-custom_blue-700">
-                      {ph.number}
-                    </span>
-                  </div>
-                );
-              }
-            )}
+            {phone?.map((ph: IPhone, i: number) => {
+              return (
+                <div key={i} className="flex items-center gap-[10px]">
+                  <IconFinder name={ph.iconName} />
+                  <span className="font-normal text-[14px] leading-[21px] text-custom_blue-700">
+                    {ph.number}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </td>
         <td className="text-left p-5">
           <div className="flex flex-col items-start gap-[6px] ">
-            {contact.map((form: any, i: number) => {
+            {contact.map((form: IContact, i: number) => {
               return (
                 <div key={i} className="flex items-center gap-[7px]">
                   {' '}

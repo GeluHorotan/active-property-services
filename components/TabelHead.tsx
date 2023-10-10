@@ -1,9 +1,12 @@
+import { ITabelData } from '@/types/IApartament';
 import { FC, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
 interface ITabelHead {
+  // To be fixed later ITabelData
+
   tabel_data: any;
-  setApartaments: React.Dispatch<React.SetStateAction<any>>;
+  setApartaments: React.Dispatch<React.SetStateAction<ITabelData[]>>;
   resetState: () => void;
 }
 
