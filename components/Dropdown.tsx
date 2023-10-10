@@ -22,7 +22,7 @@ const Dropdown: FC<IDropdown> = ({
       as="div"
       className={cn('relative z-50  col-span-4 origin-center ', className)}
     >
-      {({ open, active }) => (
+      {({ open }) => (
         <>
           <Menu.Button
             className={`${
