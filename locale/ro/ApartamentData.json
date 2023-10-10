@@ -289,6 +289,22 @@
           }
         ]
       }
+    ],
+    "filter_by_status": [
+      {
+        "title": "Toate",
+        "identifier": 1
+      },
+      {
+        "title": "Libere",
+        "identifier": 2,
+        "empty": true
+      },
+      {
+        "title": "Inchiriate",
+        "identifier": 3,
+        "empty": false
+      }
     ]
   }
 }

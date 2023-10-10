@@ -30,7 +30,7 @@ const PaperworkIcon: FC<IIcon> = ({ size, className }) => {
           d="M12.541,20.416a.571.571,0,0,1,.809,0L15.231,22.3l1.881-1.882a.572.572,0,0,1,.809.809l-2.286,2.286a.571.571,0,0,1-.809,0l-2.286-2.286a.571.571,0,0,1,0-.809Z"
           transform="translate(-3.874 -8.856)"
           fill="#0c4ab9"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />
         <path
           id="Path_106"
@@ -38,7 +38,7 @@ const PaperworkIcon: FC<IIcon> = ({ size, className }) => {
           d="M17.446,13.5a.571.571,0,0,1,.571.571v4.571a.571.571,0,1,1-1.143,0V14.071A.571.571,0,0,1,17.446,13.5Z"
           transform="translate(-6.089 -5.536)"
           fill="#0c4ab9"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />
       </g>
     </svg>
