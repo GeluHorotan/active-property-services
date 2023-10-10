@@ -4,16 +4,51 @@
       "title": "Panou de control",
       "iconName": "Panel",
       "isExtendable": true,
-      "isGreen": true
+      "to": "/"
     },
-    { "title": "Financiar", "iconName": "Money", "isExtendable": true },
-    { "title": "Tehnic", "iconName": "Technical", "isExtendable": true },
-    { "title": "Imobiliare", "iconName": "RealEstate", "isExtendable": true },
-    { "title": "Furnizori", "iconName": "Supplier", "isExtendable": true },
-    { "title": "Marketplace", "iconName": "Marketplace", "isExtendable": true },
-    { "title": "Rapoarte", "iconName": "Reports" },
-    { "title": "Contacte", "iconName": "Contacts", "isExtendable": true },
-    { "title": "Templates", "iconName": "Templates", "isExtendable": true }
+    {
+      "title": "Financiar",
+      "iconName": "Money",
+      "isExtendable": true,
+      "to": "/financiar"
+    },
+    {
+      "title": "Tehnic",
+      "iconName": "Technical",
+      "isExtendable": true,
+      "to": "/tehnic"
+    },
+    {
+      "title": "Imobiliare",
+      "iconName": "RealEstate",
+      "isExtendable": true,
+      "to": "/imobiliare"
+    },
+    {
+      "title": "Furnizori",
+      "iconName": "Supplier",
+      "isExtendable": true,
+      "to": "/furnizori"
+    },
+    {
+      "title": "Marketplace",
+      "iconName": "Marketplace",
+      "isExtendable": true,
+      "to": "/marketplace"
+    },
+    { "title": "Rapoarte", "iconName": "Reports", "to": "/reports" },
+    {
+      "title": "Contacte",
+      "iconName": "Contacts",
+      "isExtendable": true,
+      "to": "/contacte"
+    },
+    {
+      "title": "Templates",
+      "iconName": "Templates",
+      "isExtendable": true,
+      "to": "/templates"
+    }
   ],
   "secondary_buttons": [
     { "title": "Calendar", "iconName": "Calendar" },

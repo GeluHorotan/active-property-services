@@ -3,7 +3,7 @@ export interface INavigation {
     title: string;
     iconName: string;
     isExtendable?: boolean;
-    isGreen?: boolean;
+    to: string;
   }[];
   secondary_buttons: {
     title: string;

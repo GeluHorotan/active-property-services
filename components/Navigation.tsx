@@ -1,12 +1,16 @@
+'use client';
 import { FC } from 'react';
 import navigationData from '@ro/navigationData.json';
 import Logo from '@/components/svgs/Logo';
 import Link from 'next/link';
 import IconFinder from '@icons/IconFinder';
 import { INavigation } from '@/types/INavigation';
+import { usePathname } from 'next/navigation';
 
 const Navigation: FC = () => {
   const { main_buttons, secondary_buttons }: INavigation = navigationData;
+  const pathname = usePathname();
+
   return (
     <nav className=" w-full h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-custom_blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
       <div className="flex flex-col items-start gap-16  w-full relative">
@@ -26,14 +30,14 @@ const Navigation: FC = () => {
               <div
                 key={i}
                 className={`rounded-2xl py-3 px-5 flex gap-5 w-full justify-between items-center  pointer-events-none hover:bg-[#5F76C7] duration-300 ease-out transition-all ${
-                  btn?.isGreen ? 'bg-[#079348]' : ''
+                  pathname === btn?.to ? 'bg-[#079348]' : ''
                 } `}
               >
                 <div className="w-full justify-between   items-center flex  pointer-events-auto cursor-pointer  ">
                   <div className=" w-full grid grid-cols-6 gap-10 items-center ">
                     <IconFinder name={btn?.iconName} />
                     <Link
-                      href={'#'}
+                      href={btn?.to}
                       key={i}
                       className="font-medium text-[15px]  col-span-5  "
                     >
