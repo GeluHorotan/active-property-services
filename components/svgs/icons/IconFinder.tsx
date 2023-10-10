@@ -26,7 +26,10 @@ import MailIcon from '@icons/MailIcon';
 import LinkIcon from '@icons/LinkIcon';
 import PaperworkIcon from '@icons/PaperworkIcon';
 import LongArrowIcon from '@icons/LongArrowIcon';
-import SecondPlusIcon from './SecondPlusIcon';
+import SecondPlusIcon from '@icons/SecondPlusIcon';
+import MagnifyingGlassIcon from '@components/svgs/icons/MagnifyingGlassIcon';
+import SecondMailIcon from '@components/svgs/icons/SecondMailIcon';
+import UserIcon from '@icons/UserIcon';
 interface IIconFinder {
   name: string;
   className?: string;
@@ -63,6 +66,9 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Paperwork: <PaperworkIcon size={size} className={className} />,
     LongArrow: <LongArrowIcon size={size} className={className} />,
     SecondPlus: <SecondPlusIcon size={size} className={className} />,
+    MagnifyingGlass: <MagnifyingGlassIcon size={size} className={className} />,
+    SecondMail: <SecondMailIcon size={size} className={className} />,
+    User: <UserIcon size={size} className={className} />,
   };
 
   return icons[name];

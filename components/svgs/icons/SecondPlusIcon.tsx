@@ -18,8 +18,8 @@ const SecondPlusIcon: FC<IIcon> = ({ size, className }) => {
           transform="translate(-4.5 -4.5)"
           fill="none"
           stroke="#fff"
-          stroke-miterlimit="10"
-          stroke-width="1"
+          strokeMiterlimit="10"
+          strokeWidth="1"
         />
         <path
           id="Path_132"
@@ -28,9 +28,9 @@ const SecondPlusIcon: FC<IIcon> = ({ size, className }) => {
           transform="translate(-9.811 -7.598)"
           fill="none"
           stroke="#fff"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1"
         />
         <path
           id="Path_133"
@@ -39,9 +39,9 @@ const SecondPlusIcon: FC<IIcon> = ({ size, className }) => {
           transform="translate(-7.598 -9.811)"
           fill="none"
           stroke="#fff"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1"
         />
       </g>
     </svg>
