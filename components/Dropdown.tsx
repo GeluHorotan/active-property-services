@@ -20,7 +20,7 @@ const Dropdown: FC<IDropdown> = ({
   return (
     <Menu
       as="div"
-      className={cn('relative   col-span-4 origin-center ', className)}
+      className={cn('relative z-50  col-span-4 origin-center ', className)}
     >
       {({ open, active }) => (
         <>
@@ -53,7 +53,7 @@ const Dropdown: FC<IDropdown> = ({
           >
             <Menu.Items
               className={
-                '  rounded-b-[10px] [&>*:last-child]:rounded-b-[10px] cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col '
+                ' rounded-b-[10px] [&>*:last-child]:rounded-b-[10px] cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col  z-50'
               }
             >
               {children}

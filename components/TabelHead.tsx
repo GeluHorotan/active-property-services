@@ -4,6 +4,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 interface ITabelHead {
   tabel_data: any;
   setApartaments: React.Dispatch<React.SetStateAction<any>>;
+  resetState: () => void;
 }
 
 interface SortOrders {
@@ -12,7 +13,11 @@ interface SortOrders {
   [column: string]: 'ascending' | 'descending';
 }
 
-const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
+const TabelHead: FC<ITabelHead> = ({
+  tabel_data,
+  setApartaments,
+  resetState,
+}) => {
   const [sortOrders, setSortOrders] = useState<SortOrders>({
     status: 'ascending',
     name: 'ascending',
@@ -31,6 +36,8 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
 
   const handleSortClick = (column: string) => {
     toggleSortOrder(column);
+
+    resetState();
 
     const sortedData = [...tabel_data].sort((a, b) => {
       const valueA = a[column].toLowerCase();
@@ -66,7 +73,7 @@ const TabelHead: FC<ITabelHead> = ({ tabel_data, setApartaments }) => {
           onClick={() => handleSortClick('name')}
           className="text-left cursor-pointer text-[#4C5870] leading-[21px] text-[14px] font-normal pl-5 pr-[75px]  "
         >
-          <div className="flex gap-[10px] items-center">
+          <div className="flex gap-[10px] items-center  z-20">
             Nume
             <IoIosArrowDown
               className={`${

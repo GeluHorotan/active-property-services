@@ -20,27 +20,34 @@ const Apartaments: FC = () => {
     filter_by_owner,
     filter_by_type,
     filter_by_property,
-    dropdown_default_values,
+    // dropdown_default_values,
   } = apartaments_data;
 
   const [apartaments, setApartaments] = useState(tabel_data);
 
   const [activeStatus, setActiveStatus] = useState<number>(1);
-  const [activeProperty, setActiveProperty] = useState<string>(
-    dropdown_default_values[0]?.value
-  );
-  const [activeOwner, setActiveOwner] = useState<string>(
-    dropdown_default_values[1]?.value
-  );
-  const [activeType, setActiveType] = useState<string>(
-    dropdown_default_values[2]?.value
-  );
+  // const [activeProperty, setActiveProperty] = useState<string>(
+  //   dropdown_default_values[0]?.value
+  // );
+  // const [activeOwner, setActiveOwner] = useState<string>(
+  //   dropdown_default_values[1]?.value
+  // );
+  // const [activeType, setActiveType] = useState<string>(
+  //   dropdown_default_values[2]?.value
+  // );
 
   const [activeApartament, setActiveApartament] = useState<number>(0);
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
 
   const { events } = useDraggable(ref);
+
+  const resetState = () => {
+    setActiveStatus(1);
+    // setActiveProperty(dropdown_default_values[0]?.value);
+    // setActiveOwner(dropdown_default_values[1]?.value);
+    // setActiveType(dropdown_default_values[2]?.value);
+  };
 
   return (
     <div className="h-max py-[29px] bg-white col-span-13 rounded-[10px] min-w-full  ">
@@ -79,11 +86,7 @@ const Apartaments: FC = () => {
             })}
           </div>
           <div className="items-center w-full flex gap-5 ">
-            <Dropdown
-              isOverflow
-              title={activeProperty}
-              className="max-w-[225px] w-[225px]"
-            >
+            <Dropdown isOverflow title={'Proprietate'}>
               {filter_by_property?.map((property, i) => {
                 return (
                   <Menu.Item key={i}>
@@ -91,7 +94,7 @@ const Apartaments: FC = () => {
                       <div
                         onClick={() => {
                           setActiveStatus(1);
-                          setActiveProperty(property?.name);
+                          // setActiveProperty(property?.name);
                           const filtered = tabel_data?.filter((apartament) =>
                             apartament.name.includes(property.identifier)
                           );
@@ -99,7 +102,7 @@ const Apartaments: FC = () => {
                         }}
                         className={`${
                           active && 'bg-[#F1EFFD]'
-                        } text-[14px] cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap  font-normal   leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
+                        }  text-[14px] cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap  font-normal   leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
                       >
                         {property?.name}
                       </div>
@@ -108,11 +111,7 @@ const Apartaments: FC = () => {
                 );
               })}
             </Dropdown>
-            <Dropdown
-              isOverflow
-              title={activeOwner}
-              className="max-w-[225px] w-[225px]"
-            >
+            <Dropdown isOverflow title={'Proprietar'}>
               {filter_by_owner?.map((owner, i) => {
                 return (
                   <Menu.Item key={i}>
@@ -123,7 +122,7 @@ const Apartaments: FC = () => {
                         } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
                         onClick={() => {
                           setActiveStatus(1);
-                          setActiveOwner(owner?.name);
+                          // setActiveOwner(owner?.name);
                           const filtered = tabel_data?.filter(
                             (apartament) => apartament?.owner === owner?.name
                           );
@@ -138,11 +137,7 @@ const Apartaments: FC = () => {
                 );
               })}
             </Dropdown>
-            <Dropdown
-              title={activeType}
-              className="max-w-[250px] w-[250px]"
-              isOverflow
-            >
+            <Dropdown title={'Tip Proprietate'}>
               {filter_by_type?.map((type, i) => {
                 return (
                   <Menu.Item key={i}>
@@ -153,7 +148,7 @@ const Apartaments: FC = () => {
                         } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2  `}
                         onClick={() => {
                           setActiveStatus(1);
-                          setActiveType(type?.title);
+                          // setActiveType(type?.title);
                           const filtered = tabel_data?.filter(
                             (apartament) =>
                               apartament?.type === type?.identifier
@@ -200,13 +195,14 @@ const Apartaments: FC = () => {
             {...events}
             className="w-full overflow-x-auto scrollbar-hide "
           >
-            {/* Table */}
+            {/* tabel */}
             <table className=" w-full    ">
               {/* Thead only one */}
               <TabelHead
+                resetState={resetState}
                 setApartaments={setApartaments}
                 tabel_data={tabel_data}
-              ></TabelHead>
+              />
               {/* Tbody - I need this multiple times */}
               {apartaments?.map((tbody, i) => {
                 return (
