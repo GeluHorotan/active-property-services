@@ -15,6 +15,7 @@ import {
   Title,
   Tooltip,
 } from 'chart.js';
+import { Menu } from '@headlessui/react';
 
 interface IPaymentsGraphBody {
   dropdown: IDropdown;
@@ -63,7 +64,23 @@ const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
       </div>{' '}
       {/* Spendings and Dropdown */}
       <div className="grid grid-cols-13 gap-[19.5px]">
-        <Dropdown items={dropdown.entries} title={dropdown.title} />
+        <Dropdown title={dropdown?.title}>
+          {dropdown?.entries.map((entry, i) => {
+            return (
+              <Menu.Item key={i}>
+                {({ active }) => (
+                  <div
+                    className={`${
+                      active && 'bg-[#F1EFFD]'
+                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
+                  >
+                    {entry?.title}
+                  </div>
+                )}
+              </Menu.Item>
+            );
+          })}
+        </Dropdown>
         <div className=" col-span-9 flex flex-col gap-[10px]">
           <div className="flex gap-[10px] items-center">
             {graph_legend?.map(
