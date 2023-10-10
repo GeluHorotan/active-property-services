@@ -70,7 +70,7 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
             className={`${
               sortOrders['title'] === 'ascending' ? '' : 'rotate-180'
             }`}
-          ></IconFinder>
+          />
         </div>
       </div>
       {entries?.map((entry: any, i: number) => {
@@ -91,7 +91,6 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
             } transition-all ease-out duration-300  cursor-pointer customShadow`}
           >
             <h5 className="font-semibold leading-[25px]  text-custom_gray-900">
-              {' '}
               {entry?.title}
             </h5>
             <span className="text-[14px] text-[#B2B2BE] font-normal leading-[21px]">

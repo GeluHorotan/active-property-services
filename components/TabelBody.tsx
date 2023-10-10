@@ -150,7 +150,6 @@ const TabelBody: FC<ITabelBody> = ({
             {contact.map((form: IContact, i: number) => {
               return (
                 <div key={i} className="flex items-center gap-[7px]">
-                  {' '}
                   <IconFinder name={form.iconName} />
                   <span className="leading-[21px] text-[14px] font-normal text-[#0B1023]">
                     {form.address}

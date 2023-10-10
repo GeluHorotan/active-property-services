@@ -1,6 +1,24 @@
 {
   "apartaments_data": {
     "fixed_head": "Denumire Proprietate",
+    "not_found": [
+      {
+        "title": "Apartament not found",
+        "sub_title": "N/A",
+        "identifier": -1,
+        "status": "N/A",
+        "name": "Apartament not found",
+        "address": "N/A",
+        "number": -1,
+        "city": "N/A",
+        "type": "N/A",
+        "owner": "N/A",
+        "tickets": [],
+        "tenant": "N/A",
+        "phone": [],
+        "contact": []
+      }
+    ],
     "tabel_heads": [
       {
         "title": "Status"

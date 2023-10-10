@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, FC } from 'react';
+import { useState, useEffect, useRef, FC } from 'react';
 import FixedTabelColumn from '@components/FixedTabelColumn';
 import { useDraggable } from 'react-use-draggable-scroll';
 
@@ -26,6 +26,7 @@ import {
 const Apartaments: FC = () => {
   const { apartaments_data }: IApartament = ApartamentData;
   const {
+    not_found,
     tabel_data,
     filter_by_status,
     filter_by_owner,
@@ -58,6 +59,17 @@ const Apartaments: FC = () => {
     // setActiveOwner(dropdown_default_values[1]?.value);
     // setActiveType(dropdown_default_values[2]?.value);
   };
+
+  const updateNotFound = () => {
+    if (apartaments.length === 0) {
+      setApartaments(not_found);
+    }
+  };
+
+  useEffect(() => {
+    updateNotFound();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [apartaments]);
 
   return (
     <div className="h-max pb-[29px] bg-white col-span-13 rounded-4xl min-w-full  ">
@@ -207,47 +219,48 @@ const Apartaments: FC = () => {
           </div>
         </div>
         <div className="flex  ">
-          <FixedTabelColumn
-            resetState={resetState}
-            setApartaments={setApartaments}
-            tabel_data={tabel_data}
-            setActiveApartament={setActiveApartament}
-            activeApartament={activeApartament}
-            fixedHead={apartaments_data.fixed_head}
-            entries={apartaments.map(({ title, sub_title, identifier }) => ({
-              title,
-              sub_title,
-              identifier,
-            }))}
-          />
+          <>
+            <FixedTabelColumn
+              resetState={resetState}
+              setApartaments={setApartaments}
+              tabel_data={tabel_data}
+              setActiveApartament={setActiveApartament}
+              activeApartament={activeApartament}
+              fixedHead={apartaments_data.fixed_head}
+              entries={apartaments.map(({ title, sub_title, identifier }) => ({
+                title,
+                sub_title,
+                identifier,
+              }))}
+            />
 
-          {/* Scrollable Area */}
-          <div
-            ref={ref}
-            {...events}
-            className="w-full overflow-x-auto scrollbar-hide "
-          >
-            {/* tabel */}
-            <table className=" w-full    ">
-              {/* Thead only one */}
-              <TabelHead
-                resetState={resetState}
-                setApartaments={setApartaments}
-                tabel_data={tabel_data}
-              />
-              {/* Tbody - I need this multiple times */}
-              {apartaments?.map((tbody: ITabelData, i: number) => {
-                return (
-                  <TabelBody
-                    setActiveApartament={setActiveApartament}
-                    activeApartament={activeApartament}
-                    key={i}
-                    data={tbody}
-                  />
-                );
-              })}
-            </table>
-          </div>
+            <div
+              ref={ref}
+              {...events}
+              className="w-full overflow-x-auto scrollbar-hide "
+            >
+              {/* tabel */}
+              <table className=" w-full    ">
+                {/* Thead only one */}
+                <TabelHead
+                  resetState={resetState}
+                  setApartaments={setApartaments}
+                  tabel_data={tabel_data}
+                />
+                {/* Tbody - I need this multiple times */}
+                {apartaments?.map((tbody: ITabelData, i: number) => {
+                  return (
+                    <TabelBody
+                      setActiveApartament={setActiveApartament}
+                      activeApartament={activeApartament}
+                      key={i}
+                      data={tbody}
+                    />
+                  );
+                })}
+              </table>
+            </div>
+          </>
         </div>
       </div>
     </div>

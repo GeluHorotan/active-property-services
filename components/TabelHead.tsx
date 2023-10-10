@@ -57,7 +57,6 @@ const TabelHead: FC<ITabelHead> = ({
   return (
     <thead className={`  `}>
       <tr className=" whitespace-nowrap bg-[#F6F6F6]  h-[75px]">
-        {' '}
         <th
           className="text-left cursor-pointer  text-[#4C5870] leading-[21px] text-[14px] font-normal  pl-8  pr-[81px] "
           onClick={() => handleSortClick('status')}

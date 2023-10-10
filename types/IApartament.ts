@@ -5,6 +5,7 @@ export interface IApartament {
 export interface IApartamentsData {
   fixed_head: string;
   tabel_heads: { title: string }[];
+  not_found: ITabelData[];
   tabel_data: ITabelData[];
   filter_by_status: IFilterByStatus[];
   filter_by_owner: IFilterByOwner[];

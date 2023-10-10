@@ -61,7 +61,7 @@ const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
         >
           {button.text}
         </Button>
-      </div>{' '}
+      </div>
       {/* Spendings and Dropdown */}
       <div className="grid grid-cols-13 gap-[19.5px]">
         <Dropdown title={dropdown?.title}>

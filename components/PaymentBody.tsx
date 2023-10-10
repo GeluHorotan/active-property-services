@@ -40,7 +40,7 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
             {payments.to}
           </div>
         </div>
-      </div>{' '}
+      </div>
       <div className="flex flex-col gap-[57px]">
         <div className="flex items-center gap-[25px]  ">
           {payments?.spent_on.map((pay, i) => {
@@ -101,7 +101,6 @@ const PaymentBody: FC<IPaymentBody> = ({ payments }) => {
                       {entry.title}
                       {entry.sub_title && (
                         <>
-                          {' '}
                           <br /> {entry.sub_title}
                         </>
                       )}
