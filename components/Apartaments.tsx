@@ -1,5 +1,5 @@
 'use client';
-import { useRef, FC } from 'react';
+import { useState, useRef, FC } from 'react';
 import FixedTabelColumn from '@components/FixedTabelColumn';
 import { useDraggable } from 'react-use-draggable-scroll';
 
@@ -9,6 +9,7 @@ import TabelHead from '@components/TabelHead';
 import ApartamentData from '@ro/ApartamentData.json';
 
 const Apartaments: FC = () => {
+  const [activeApartament, setActiveApartament] = useState<number>(0);
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref);
@@ -18,7 +19,11 @@ const Apartaments: FC = () => {
     <div className="h-max py-8 bg-white col-span-13 rounded-[10px] min-w-full  ">
       {/* Whole Tabel */}
       <div className="flex ">
-        <FixedTabelColumn fixedColumn={apartaments_data.fixed_column} />
+        <FixedTabelColumn
+          setActiveApartament={setActiveApartament}
+          activeApartament={activeApartament}
+          fixedColumn={apartaments_data.fixed_column}
+        />
 
         {/* Scrollable Area */}
         <div
@@ -32,7 +37,14 @@ const Apartaments: FC = () => {
             <TabelHead />
             {/* Tbody - I need this multiple times */}
             {tabel?.tabel_body?.map((tbody, i) => {
-              return <TabelBody key={i} data={tbody} />;
+              return (
+                <TabelBody
+                  setActiveApartament={setActiveApartament}
+                  activeApartament={activeApartament}
+                  key={i}
+                  data={tbody}
+                />
+              );
             })}
           </table>
         </div>

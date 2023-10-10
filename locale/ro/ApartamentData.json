@@ -4,30 +4,37 @@
       "head_title": "Denumire proprietate",
       "entries": [
         {
+          "identifier": 1,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         },
         {
+          "identifier": 2,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         },
         {
+          "identifier": 3,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         },
         {
+          "identifier": 4,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         },
         {
+          "identifier": 5,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         },
         {
+          "identifier": 6,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         },
         {
+          "identifier": 7,
           "title": "Apartament, Siriului 12",
           "sub_title": "# 125 458"
         }
@@ -71,6 +78,7 @@
       ],
       "tabel_body": [
         {
+          "identifier": 1,
           "status": "Inchiriat",
           "name": "Apartament Siriului",
           "address": "Str Siriului",
@@ -106,6 +114,7 @@
         },
 
         {
+          "identifier": 2,
           "status": "Inchiriat",
           "name": "Complex Casa Ana",
           "address": "Str Siriului",
@@ -127,7 +136,7 @@
             },
             {
               "number": "0241 555 111",
-              "iconName": "Home"
+              "iconName": "SMobile"
             }
           ],
           "contact": [
@@ -138,6 +147,7 @@
           ]
         },
         {
+          "identifier": 3,
           "status": "Vacant",
           "name": "Apartament Siriului",
           "address": "Str Siriului",
@@ -168,6 +178,7 @@
           ]
         },
         {
+          "identifier": 4,
           "status": "Inchiriat",
           "name": "Complex Casa Ana",
           "address": "Str Siriului",
@@ -188,7 +199,7 @@
             },
             {
               "number": "0241 555 111",
-              "iconName": "Home"
+              "iconName": "SMobile"
             }
           ],
           "contact": [
@@ -199,6 +210,7 @@
           ]
         },
         {
+          "identifier": 5,
           "status": "Vacant",
           "name": "Apartament Siriului",
           "address": "Str Siriului",
@@ -230,6 +242,7 @@
           ]
         },
         {
+          "identifier": 6,
           "status": "Indisponibil",
           "name": "Complex Casa Ana",
           "address": "Str Siriului",
@@ -255,7 +268,7 @@
             },
             {
               "number": "0241 555 111",
-              "iconName": "Home"
+              "iconName": "SMobile"
             }
           ],
           "contact": [
@@ -266,6 +279,7 @@
           ]
         },
         {
+          "identifier": 7,
           "status": "Vacant",
           "name": "Apartament Siriului",
           "address": "Str Siriului",

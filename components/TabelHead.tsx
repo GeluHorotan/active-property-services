@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const TabelHead: FC = () => {
   return (
-    <thead className="border-t-[1px] border-b-[1px] border-[#EAEEF7] ">
+    <thead className={`  `}>
       <tr className=" whitespace-nowrap bg-[#F6F6F6]  h-[75px]">
         {' '}
         <th className="text-left  text-[#4C5870] leading-[21px] text-[14px] font-normal  pl-5 pr-[81px] ">

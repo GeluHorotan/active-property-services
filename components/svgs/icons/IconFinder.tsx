@@ -20,6 +20,11 @@ import DelayedIcon from '@icons/DelayedIcon';
 import PaidIcon from '@icons/PaidIcon';
 import ScheduledIcon from '@icons/ScheduledIcon';
 import DownloadIcon from '@icons/DownloadIcon';
+import MobileIcon from '@icons/MobileIcon';
+import SMobileIcon from '@icons/SMobileIcon';
+import MailIcon from '@icons/MailIcon';
+import LinkIcon from '@icons/LinkIcon';
+import PaperworkIcon from '@icons/PaperworkIcon';
 
 interface IIconFinder {
   name: string;
@@ -50,6 +55,11 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Paid: <PaidIcon size={size} className={className} />,
     Scheduled: <ScheduledIcon size={size} className={className} />,
     Download: <DownloadIcon size={size} className={className} />,
+    Mobile: <MobileIcon size={size} className={className} />,
+    SMobile: <SMobileIcon size={size} className={className} />,
+    Mail: <MailIcon size={size} className={className} />,
+    Link: <LinkIcon size={size} className={className} />,
+    Paperwork: <PaperworkIcon size={size} className={className} />,
   };
 
   return icons[name];

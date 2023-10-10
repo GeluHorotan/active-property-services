@@ -3,10 +3,17 @@ import IconFinder from './svgs/icons/IconFinder';
 
 interface ITabelBody {
   data: any;
+  setActiveApartament: React.Dispatch<React.SetStateAction<number>>;
+  activeApartament: number;
 }
 
-const TabelBody: FC<ITabelBody> = ({ data }) => {
+const TabelBody: FC<ITabelBody> = ({
+  data,
+  activeApartament,
+  setActiveApartament,
+}) => {
   const {
+    identifier,
     status,
     name,
     address,
@@ -21,12 +28,41 @@ const TabelBody: FC<ITabelBody> = ({ data }) => {
   } = data;
 
   return (
-    <tbody className="  border-t-[1px] border-b-[1px] border-[#EAEEF7]">
+    <tbody
+      className={`cursor-pointer    ${
+        activeApartament === identifier
+          ? 'border-custom_blue-700 border-[2px] border-l-0 rounded-r-[5px] '
+          : 'border-[#EAEEF7] border-t-[1px] border-b-[1px]'
+      } transition-all ease-out duration-300  `}
+      onClick={() => {
+        if (activeApartament !== identifier) {
+          setActiveApartament(identifier);
+        } else {
+          setActiveApartament(0);
+        }
+      }}
+    >
       <tr className="h-[100px] ">
         <td className=" whitespace-nowrap p-5">
-          <div className="bg-custom_green-50 px-[15px] flex items-center justify-start w-max py-[6px] rounded-[16px] gap-[7px]">
-            <span className="w-2 h-2 bg-custom_green-600 rounded-full" />
-            <span className="text-[14px] font-normal leading-[21px] text-custom_green-600">
+          <div
+            className={`${
+              status === 'Inchiriat'
+                ? 'bg-custom_green-50 text-custom_green-600'
+                : status === 'Vacant'
+                ? 'bg-custom_yellow-50 text-custom_yellow-700'
+                : 'bg-custom_purple-600 text-custom_gray-700'
+            }  px-[15px] flex items-center justify-start w-max py-[6px] rounded-[16px] gap-[7px]`}
+          >
+            <span
+              className={`${
+                status === 'Inchiriat'
+                  ? 'bg-custom_green-600'
+                  : status === 'Vacant'
+                  ? ' bg-custom_yellow-700'
+                  : ' bg-custom_gray-700'
+              }  w-2 h-2  rounded-full`}
+            />
+            <span className="text-[14px] font-normal leading-[21px] ">
               {status}
             </span>
           </div>
@@ -43,12 +79,18 @@ const TabelBody: FC<ITabelBody> = ({ data }) => {
           {number}
         </td>
         <td className="  whitespace-nowrap p-5">
-          <span className="text-[14px] font-medium text-custom_blue-500 px-[15px] py-[6px] rounded-2xl bg-custom_purple-50  leading-[21px]">
+          <span className="text-[14px] font-medium text-custom_blue-500  rounded-2xl   leading-[21px]">
             {city}
           </span>
         </td>
         <td className=" p-5">
-          <span className="text-[14px] font-medium leading-[21px]  text-custom_purple-200 bg-custom_orange-50 py-[6px] rounded-[16px] px-[15px]">
+          <span
+            className={` ${
+              type === 'Apartament'
+                ? 'text-custom_purple-200 bg-custom_orange-50'
+                : 'text-custom_blue-500 bg-custom_purple-50'
+            } text-[14px] font-medium leading-[21px]    py-[6px] rounded-[16px] px-[15px]`}
+          >
             {type}
           </span>
         </td>
@@ -81,17 +123,21 @@ const TabelBody: FC<ITabelBody> = ({ data }) => {
           </div>
         </td>
         <td className=" whitespace-nowrap p-5">
-          <span className="bg-custom_green-50 px-[18px] py-[5px] rounded-2xl text-[14px] leading-[21px] font-medium text-[#0B1023]">
+          <span
+            className={`${
+              tenant === '-' ? 'bg-custom_red-50' : 'bg-custom_green-50'
+            }  px-[18px] py-[5px] rounded-2xl text-[14px] leading-[21px] font-medium text-[#0B1023]`}
+          >
             {tenant}
           </span>
         </td>
         <td className=" whitespace-nowrap p-5">
-          <div className="flex flex-col">
+          <div className="flex flex-col  gap-[5px]">
             {phone?.map(
               (ph: { number: string; iconName: string }, i: number) => {
                 return (
                   <div key={i} className="flex items-center gap-[10px]">
-                    P
+                    <IconFinder name={ph.iconName} />
                     <span className="font-normal text-[14px] leading-[21px] text-custom_blue-700">
                       {ph.number}
                     </span>
@@ -107,7 +153,7 @@ const TabelBody: FC<ITabelBody> = ({ data }) => {
               return (
                 <div key={i} className="flex items-center gap-[7px]">
                   {' '}
-                  E
+                  <IconFinder name={form.iconName} />
                   <span className="leading-[21px] text-[14px] font-normal text-[#0B1023]">
                     {form.address}
                   </span>
@@ -117,9 +163,11 @@ const TabelBody: FC<ITabelBody> = ({ data }) => {
           </div>
         </td>
         <td className=" p-5 content-center ">
-          <span className="px-[7px]  py-[6px] bg-[#CCD9F1] rounded-full w-7 h-7 flex items-center justify-center">
-            D
-          </span>
+          <div className="flex items-center justify-center cursor-pointer">
+            <span className="px-[7px]  py-[6px] bg-[#CCD9F1] rounded-full w-7 h-7 flex items-center justify-center">
+              <IconFinder name="Paperwork" />
+            </span>
+          </div>
         </td>
       </tr>
     </tbody>
