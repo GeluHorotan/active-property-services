@@ -26,37 +26,27 @@
   },
   "graph_legend": [
     {
-      "title": "Venituri",
-      "color": "#0B1023",
-      "bg_color": "bg-custom_gray-600"
+      "title": "Venituri"
     },
     {
-      "title": "Cheltuieli",
-      "color": "#0B1023",
-      "bg_color": "bg-custom_purple-300"
+      "title": "Cheltuieli"
     },
     {
-      "title": "Profit",
-      "color": "#0B1023",
-      "bg_color": "bg-custom_gray-500"
+      "title": "Profit"
     }
   ],
   "graph_sub_legend": [
     {
-      "text": "Venituri - &euro; 15.000",
-      "color": "text-custom_gray-600"
+      "text": "Venituri - &euro; 15.000"
     },
     {
-      "text": "Cheltuieli - &euro; 15.000",
-      "color": "text-custom_purple-300"
+      "text": "Cheltuieli - &euro; 15.000"
     },
     {
-      "text": "Profit - &euro; 6.000",
-      "color": "text-custom_gray-500"
+      "text": "Profit - &euro; 6.000"
     },
     {
-      "text": "ROI - 8.8%",
-      "color": "text-custom_green-400"
+      "text": "ROI - 8.8%"
     }
   ],
   "button": {

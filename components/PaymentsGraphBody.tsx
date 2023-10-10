@@ -21,12 +21,9 @@ interface IPaymentsGraphBody {
   dropdown: IDropdown;
   graph_legend: {
     title: string;
-    bg_color: string;
-    color: string;
   }[];
   graph_sub_legend: {
     text: string;
-    color: string;
   }[];
   title: string;
   button: {
@@ -95,25 +92,26 @@ const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
             </Dropdown>
             <div className=" col-span-9 flex flex-col gap-[10px]">
               <div className="flex gap-[10px] items-center">
-                {graph_legend?.map(
-                  (
-                    legend: { title: string; color: string; bg_color: string },
-                    i: number
-                  ) => {
-                    return (
-                      <div key={i} className="flex gap-[8px] items-center">
-                        <div
-                          className={`w-3 h-3 ${legend?.bg_color} rounded-full `}
-                        />
-                        <span
-                          className={`font-normal leading-[21px] text-[${legend?.color}] text-[14px]`}
-                        >
-                          {legend.title}
-                        </span>
-                      </div>
-                    );
-                  }
-                )}
+                {graph_legend?.map((legend: { title: string }, i: number) => {
+                  return (
+                    <div key={i} className="flex gap-[8px] items-center">
+                      <div
+                        className={`w-3 h-3 ${
+                          i === 0
+                            ? 'bg-custom_gray-600'
+                            : i === 1
+                            ? 'bg-custom_purple-300'
+                            : 'bg-custom_gray-500'
+                        } rounded-full `}
+                      />
+                      <span
+                        className={`font-normal leading-[21px] text-[#0B1023] text-[14px]`}
+                      >
+                        {legend.title}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="flex gap-[15px] items-center ">
@@ -121,14 +119,21 @@ const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
                   (
                     sub_legend: {
                       text: string;
-                      color: string;
                     },
                     i: number
                   ) => {
                     return (
                       <span
                         key={i}
-                        className={`${sub_legend?.color} font-medium leading-[21px] text-[14px] `}
+                        className={`${
+                          i === 0
+                            ? 'text-custom_gray-600'
+                            : i === 1
+                            ? 'text-custom_purple-300'
+                            : i === 2
+                            ? 'text-custom_gray-500'
+                            : 'text-custom_green-400'
+                        } font-medium leading-[21px] text-[14px] `}
                         dangerouslySetInnerHTML={{ __html: sub_legend?.text }}
                       />
                     );
