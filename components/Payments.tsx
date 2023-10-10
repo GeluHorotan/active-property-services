@@ -16,8 +16,9 @@ const Payments: FC = () => {
       <div className="w-full  bg-white rounded-b-4xl  rounded-tr-4xl pt-[25px] pb-[48px] pl-[25px] pr-5 h-[530px]">
         {view === 1 && <PaymentBody payments={payments} />}
         {view === 2 && (
-          <ContentNotFound className="w-full  h-full items-center flex justify-center">
-            We&apos;re working on this, please be patient.
+          <ContentNotFound className="w-full  h-full items-center flex justify-center ">
+            Sorry, this area is under development, we&apos;re working on it,
+            please be patient.
           </ContentNotFound>
         )}
       </div>

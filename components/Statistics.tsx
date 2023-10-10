@@ -31,8 +31,9 @@ const Statistics: FC = () => {
             button={button}
           />
         ) : (
-          <ContentNotFound>
-            We&apos;re working on this, please be patient.
+          <ContentNotFound className="w-full pb-[48px]  h-full items-center flex justify-center ">
+            Sorry, this area is under development, we&apos;re working on it,
+            please be patient.
           </ContentNotFound>
         )}
       </div>
