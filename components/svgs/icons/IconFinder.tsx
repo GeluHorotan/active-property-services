@@ -26,7 +26,7 @@ import MailIcon from '@icons/MailIcon';
 import LinkIcon from '@icons/LinkIcon';
 import PaperworkIcon from '@icons/PaperworkIcon';
 import LongArrowIcon from '@icons/LongArrowIcon';
-
+import SecondPlusIcon from './SecondPlusIcon';
 interface IIconFinder {
   name: string;
   className?: string;
@@ -62,6 +62,7 @@ const IconFinder: FC<IIconFinder> = ({ name, size, className }) => {
     Link: <LinkIcon size={size} className={className} />,
     Paperwork: <PaperworkIcon size={size} className={className} />,
     LongArrow: <LongArrowIcon size={size} className={className} />,
+    SecondPlus: <SecondPlusIcon size={size} className={className} />,
   };
 
   return icons[name];

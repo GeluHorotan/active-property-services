@@ -11,6 +11,8 @@ import TabelHead from '@components/TabelHead';
 
 import ApartamentData from '@ro/ApartamentData.json';
 import Dropdown from './Dropdown';
+import Button from './Button';
+import IconFinder from './svgs/icons/IconFinder';
 
 const Apartaments: FC = () => {
   const { apartaments_data } = ApartamentData;
@@ -50,8 +52,36 @@ const Apartaments: FC = () => {
   };
 
   return (
-    <div className="h-max py-[29px] bg-white col-span-13 rounded-[10px] min-w-full  ">
+    <div className="h-max pb-[29px] bg-white col-span-13 rounded-[10px] min-w-full  ">
       {/* Whole Tabel */}
+
+      <div className="flex flex-col ">
+        <div className=" px-5 py-5 flex justify-between">
+          <div className="flex gap-[12px] items-center">
+            <h4 className="font-semibold text-custom_gray-900">
+              Portofoliu Proprietati
+            </h4>
+            <div className="bg-custom_blue-100 rounded-2xl px-[18px] py-[7px] text-[13px] ">
+              <span>25 proprietati</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-5">
+            <Button className="text-[16px] border-none rounded-[10px] items-center bg-[#079348] py-[14px] px-[28px] leading-[25px] text-custom_gray-50 font-normal gap-[8.5px]">
+              <IconFinder name="SecondPlus" />
+              Adauga proprietate
+            </Button>
+            <Button className="text-[16px] border-[0.5px] border-custom_gray-700  rounded-[10px] items-center  py-[14px] px-[28px] leading-[25px]  font-normal gap-[8.5px] text-custom_gray-700">
+              <IconFinder
+                name="Download"
+                className="fill-custom-gray-700"
+                size={15}
+              />
+              Exporta raport
+            </Button>
+          </div>
+        </div>
+        <div className="w-full bg-custom_purple-800 h-[1px]" />
+      </div>
       <div className="w-full flex flex-col ">
         <div className="w-full  p-5 flex gap-[15px]">
           <div className="flex [&>*:last-child]:rounded-r-[10px] [&>*:first-child]:rounded-l-[10px]">
