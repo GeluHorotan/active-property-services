@@ -36,7 +36,7 @@
       "isExtendable": true,
       "to": "/marketplace"
     },
-    { "title": "Rapoarte", "iconName": "Reports", "to": "/reports" },
+    { "title": "Rapoarte", "iconName": "Reports", "to": "/rapoarte" },
     {
       "title": "Contacte",
       "iconName": "Contacts",

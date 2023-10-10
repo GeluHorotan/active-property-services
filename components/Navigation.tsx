@@ -14,6 +14,7 @@ const Navigation: FC = () => {
   return (
     <nav className=" w-full h-full  px-3 pt-6 pb-9 flex items-center justify-between  bg-custom_blue-300 rounded-[20px] flex-col  text-[#fff] text-base ">
       <div className="flex flex-col items-start gap-16  w-full relative">
+        {pathname}
         <div className="absolute ringShadow -right-7 top-12 rounded-full flex items-center w-8 h-8 justify-center bg-[#FFF]  ">
           <IconFinder
             name={'ArrowToLeft'}
