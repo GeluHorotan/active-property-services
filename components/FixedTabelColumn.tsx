@@ -12,8 +12,8 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
   activeApartament,
 }) => {
   return (
-    <div className="flex flex-col items-start  w-[20%]  ">
-      <div className="text-left h-[75px] bg-[#F6F6F6]  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal shadow-[10px_0px_10px_-10px_rgba(0,0,0,1)]">
+    <div className="flex flex-col items-start  w-[23%] ">
+      <div className="text-left h-[75px] bg-[#F6F6F6]  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal customShadow">
         {fixedColumn.head_title}
       </div>
       {fixedColumn?.entries.map((entry: any, i: number) => {
@@ -31,7 +31,7 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
               entry.identifier === activeApartament
                 ? 'border-custom_blue-700 border-[2px] border-r-0 rounded-l-[5px]'
                 : 'border-t-[1px]  border-b-[1px] border-[#EAEEF7]'
-            } transition-all ease-out duration-300  cursor-pointer`}
+            } transition-all ease-out duration-300  cursor-pointer customShadow`}
           >
             <h5 className="font-semibold leading-[25px]  text-custom_gray-900">
               {' '}

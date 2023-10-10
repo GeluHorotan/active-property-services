@@ -67,7 +67,7 @@ const TabelBody: FC<ITabelBody> = ({
             </span>
           </div>
         </td>
-        <td className=" p-5">
+        <td className="pr-[40px] p-5">
           <span className="text-[14px] font-medium leading-[21px] text-[#0B1023] ">
             {name}
           </span>

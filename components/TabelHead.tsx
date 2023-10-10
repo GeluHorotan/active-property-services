@@ -5,7 +5,7 @@ const TabelHead: FC = () => {
     <thead className={`  `}>
       <tr className=" whitespace-nowrap bg-[#F6F6F6]  h-[75px]">
         {' '}
-        <th className="text-left  text-[#4C5870] leading-[21px] text-[14px] font-normal  pl-5 pr-[81px] ">
+        <th className="text-left  text-[#4C5870] leading-[21px] text-[14px] font-normal  pl-5  pr-[81px] ">
           Status
         </th>
         <th className="text-left text-[#4C5870] leading-[21px] text-[14px] font-normal pl-5 pr-[75px]  ">
