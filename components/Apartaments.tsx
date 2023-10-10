@@ -84,11 +84,17 @@ const Apartaments: FC = () => {
             </div>
           </div>
           <div className="flex items-center gap-5">
-            <Button className="text-[16px] border-none rounded-[10px] items-center hover:bg-[#085F30] bg-[#079348] py-[14px] px-[28px] leading-[25px] text-custom_gray-50 font-normal gap-[8.5px]">
+            <Button
+              isContentNotFound
+              className="text-[16px] border-none rounded-[10px] items-center hover:bg-[#085F30] bg-[#079348] py-[14px] px-[28px] leading-[25px] text-custom_gray-50 font-normal gap-[8.5px]"
+            >
               <IconFinder name="SecondPlus" />
               Adauga proprietate
             </Button>
-            <Button className="text-[16px] border-[0.5px] border-custom_gray-700   rounded-[10px] items-center  py-[14px] px-[28px] leading-[25px]  font-normal gap-[8.5px] text-custom_gray-700">
+            <Button
+              isContentNotFound
+              className="text-[16px] border-[0.5px] border-custom_gray-700   rounded-[10px] items-center  py-[14px] px-[28px] leading-[25px]  font-normal gap-[8.5px] text-custom_gray-700"
+            >
               <IconFinder
                 name="Download"
                 className="fill-custom-gray-700"

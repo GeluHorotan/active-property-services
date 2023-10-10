@@ -57,6 +57,7 @@ const PaymentsGraphBody: FC<IPaymentsGraphBody> = ({
       <div className=" w-full flex items-center justify-between">
         <h4 className="font-semibold leading-[27px]">{title}</h4>
         <Button
+          isContentNotFound
           className="p-0 border-none  text-[14px] font-normal leading-[21px] text-[#0B1023] gap-[12.7px] flex items-center justify-center"
           icon={<IconFinder name={button?.iconName} />}
         >

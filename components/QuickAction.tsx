@@ -54,6 +54,7 @@ const QuickAction: FC<IQuickAction> = ({ action, isSingleEntry }) => {
         })}
         {/* Footer */}
         <Button
+          isContentNotFound
           className="col-span-6  leading-[18px]"
           icon={<IconFinder name={'Plus'} size={16} />}
         >
