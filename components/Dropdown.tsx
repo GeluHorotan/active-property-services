@@ -2,24 +2,40 @@
 import React, { FC } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { IoIosArrowDown } from 'react-icons/io';
+import { cn } from '@lib/utils';
 
 interface IDropdown {
   title: string;
-
+  isOverflow?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
-const Dropdown: FC<IDropdown> = ({ title, children }) => {
+const Dropdown: FC<IDropdown> = ({
+  title,
+  children,
+  className,
+  isOverflow,
+}) => {
   return (
-    <Menu as="div" className={'relative col-span-4 origin-center '}>
-      {({ open }) => (
+    <Menu
+      as="div"
+      className={cn('relative   col-span-4 origin-center ', className)}
+    >
+      {({ open, active }) => (
         <>
           <Menu.Button
             className={`${
               open && 'rounded-b-none'
             } px-5 w-full py-[15px] duration-100 ease-out transition-all flex items-center justify-between rounded-[10px] ui-open:rounded-b-none border-[0.5px] gap-[85px] bg-white border-custom_gray-700`}
           >
-            <span className="font-normal leading-[21px] text-custom_gray-400 text-[14px]">
+            <span
+              className={`font-normal leading-[21px]  ${
+                open ? 'text-custom_gray-400 ' : 'text-custom_gray-700'
+              } text-[14px] tranisiton-all   duration-300 ease-out ${
+                isOverflow && 'overflow-hidden text-ellipsis whitespace-nowrap'
+              }  `}
+            >
               {title}
             </span>
             <IoIosArrowDown

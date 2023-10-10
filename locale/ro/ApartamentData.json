@@ -305,6 +305,70 @@
         "identifier": 3,
         "empty": false
       }
+    ],
+    "filter_by_owner": [
+      {
+        "name": "Vasile Popescu"
+      },
+      { "name": "Gheorghe Amariei" },
+      { "name": "Andrei Vasilica" },
+      { "name": "Mirica Marica" },
+      { "name": "Gica Lica" }
+    ],
+    "filter_by_type": [
+      {
+        "title": "Apartament 2 camere",
+        "identifier": "Apartament"
+      },
+      {
+        "title": "Casa",
+        "identifier": "Casa"
+      },
+      {
+        "title": "Spatiu comercial",
+        "identifier": "Spatiu"
+      },
+      {
+        "title": "Apartament 3 camere",
+        "identifier": "Apartament"
+      },
+      {
+        "title": "Garsoniera",
+        "identifier": "Garsoniera"
+      }
+    ],
+    "filter_by_property": [
+      {
+        "name": "Complex Casa 1",
+        "identifier": "Complex"
+      },
+      {
+        "name": "Complex Casa 2",
+        "identifier": "Complex"
+      },
+      {
+        "name": "Complex Casa 3, Str Florilor",
+        "identifier": "Complex"
+      },
+      {
+        "name": "Complex Casa , Str Florilor",
+        "identifier": "Complex"
+      },
+      {
+        "name": "Complex Casa 123",
+        "identifier": "Complex"
+      }
+    ],
+    "dropdown_default_values": [
+      {
+        "value": "Proprietate"
+      },
+      {
+        "value": "Proprietar"
+      },
+      {
+        "value": "Tip Proprietate"
+      }
     ]
   }
 }

@@ -14,11 +14,27 @@ import Dropdown from './Dropdown';
 
 const Apartaments: FC = () => {
   const { apartaments_data } = ApartamentData;
-  const { tabel_data, filter_by_status } = apartaments_data;
+  const {
+    tabel_data,
+    filter_by_status,
+    filter_by_owner,
+    filter_by_type,
+    filter_by_property,
+    dropdown_default_values,
+  } = apartaments_data;
 
   const [apartaments, setApartaments] = useState(tabel_data);
 
   const [activeStatus, setActiveStatus] = useState<number>(1);
+  const [activeProperty, setActiveProperty] = useState<string>(
+    dropdown_default_values[0]?.value
+  );
+  const [activeOwner, setActiveOwner] = useState<string>(
+    dropdown_default_values[1]?.value
+  );
+  const [activeType, setActiveType] = useState<string>(
+    dropdown_default_values[2]?.value
+  );
 
   const [activeApartament, setActiveApartament] = useState<number>(0);
   const ref =
@@ -63,80 +79,95 @@ const Apartaments: FC = () => {
             })}
           </div>
           <div className="items-center w-full flex gap-5 ">
-            {/* <Dropdown title={'Proprietate'}>
-              <Menu.Item>
-                {({ active }) => (
-                  <div
-                    className={`${
-                      active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                  >
-                    Complex Casa 1
-                  </div>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <div
-                    className={`${
-                      active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                  >
-                    Complex Casa 2
-                  </div>
-                )}
-              </Menu.Item>
-            </Dropdown> */}
-            <Dropdown title={'Proprietar'}>
-              <Menu.Item>
-                {({ active }) => (
-                  <div
-                    className={`${
-                      active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                    onClick={() => {
-                      const filtered = tabel_data?.filter(
-                        (apartament) => apartament.owner === 'Vasile Popescu'
-                      );
-                      console.log(filtered, 'ff');
-                      setApartaments(filtered);
-                    }}
-                  >
-                    Vasile Popescu
-                  </div>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <div
-                    className={`${
-                      active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                    onClick={() => {
-                      const filtered = tabel_data?.filter(
-                        (apartament) => apartament.owner === 'Gheorghe Amariei'
-                      );
-                      console.log(filtered, 'ff');
-                      setApartaments(filtered);
-                    }}
-                  >
-                    Gheorghe Amariei
-                  </div>
-                )}
-              </Menu.Item>
+            <Dropdown
+              isOverflow
+              title={activeProperty}
+              className="max-w-[225px] w-[225px]"
+            >
+              {filter_by_property?.map((property, i) => {
+                return (
+                  <Menu.Item key={i}>
+                    {({ active }) => (
+                      <div
+                        onClick={() => {
+                          setActiveStatus(1);
+                          setActiveProperty(property?.name);
+                          const filtered = tabel_data?.filter((apartament) =>
+                            apartament.name.includes(property.identifier)
+                          );
+                          setApartaments(filtered);
+                        }}
+                        className={`${
+                          active && 'bg-[#F1EFFD]'
+                        } text-[14px] cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap  font-normal   leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
+                      >
+                        {property?.name}
+                      </div>
+                    )}
+                  </Menu.Item>
+                );
+              })}
             </Dropdown>
-            <Dropdown title={'Tip Proprietate'}>
-              <Menu.Item>
-                {({ active }) => (
-                  <div
-                    className={`${
-                      active && 'bg-[#F1EFFD]'
-                    } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                  >
-                    Apartament 2 camere
-                  </div>
-                )}
-              </Menu.Item>
+            <Dropdown
+              isOverflow
+              title={activeOwner}
+              className="max-w-[225px] w-[225px]"
+            >
+              {filter_by_owner?.map((owner, i) => {
+                return (
+                  <Menu.Item key={i}>
+                    {({ active }) => (
+                      <div
+                        className={`${
+                          active && 'bg-[#F1EFFD]'
+                        } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
+                        onClick={() => {
+                          setActiveStatus(1);
+                          setActiveOwner(owner?.name);
+                          const filtered = tabel_data?.filter(
+                            (apartament) => apartament?.owner === owner?.name
+                          );
+
+                          setApartaments(filtered);
+                        }}
+                      >
+                        {owner?.name}
+                      </div>
+                    )}
+                  </Menu.Item>
+                );
+              })}
+            </Dropdown>
+            <Dropdown
+              title={activeType}
+              className="max-w-[250px] w-[250px]"
+              isOverflow
+            >
+              {filter_by_type?.map((type, i) => {
+                return (
+                  <Menu.Item key={i}>
+                    {({ active }) => (
+                      <div
+                        className={`${
+                          active && 'bg-[#F1EFFD]'
+                        } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2  `}
+                        onClick={() => {
+                          setActiveStatus(1);
+                          setActiveType(type?.title);
+                          const filtered = tabel_data?.filter(
+                            (apartament) =>
+                              apartament?.type === type?.identifier
+                          );
+
+                          setApartaments(filtered);
+                        }}
+                      >
+                        {type?.title}
+                      </div>
+                    )}
+                  </Menu.Item>
+                );
+              })}
               <Menu.Item>
                 {({ active }) => (
                   <div
