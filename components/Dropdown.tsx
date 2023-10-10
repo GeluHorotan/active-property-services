@@ -1,16 +1,15 @@
 'use client';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { IoIosArrowDown } from 'react-icons/io';
 
 interface IDropdown {
   title: string;
-  items: {
-    title: string;
-  }[];
+
+  children?: React.ReactNode;
 }
 
-const Dropdown: FC<IDropdown> = ({ items, title }) => {
+const Dropdown: FC<IDropdown> = ({ title, children }) => {
   return (
     <Menu as="div" className={'relative col-span-4 origin-center '}>
       {({ open }) => (
@@ -18,7 +17,7 @@ const Dropdown: FC<IDropdown> = ({ items, title }) => {
           <Menu.Button
             className={`${
               open && 'rounded-b-none'
-            } px-5 w-full py-[15px] duration-100 ease-out transition-all flex items-center justify-between rounded-[10px] ui-open:rounded-b-none border-[0.5px] bg-white border-custom_gray-700`}
+            } px-5 w-full py-[15px] duration-100 ease-out transition-all flex items-center justify-between rounded-[10px] ui-open:rounded-b-none border-[0.5px] gap-[85px] bg-white border-custom_gray-700`}
           >
             <span className="font-normal leading-[21px] text-custom_gray-400 text-[14px]">
               {title}
@@ -41,21 +40,7 @@ const Dropdown: FC<IDropdown> = ({ items, title }) => {
                 '  rounded-b-[10px] [&>*:last-child]:rounded-b-[10px] cursor-pointer w-full border-[0.5px] border-t-0 bg-white border-custom_gray-700  absolute top-full flex flex-col '
               }
             >
-              {items?.map((item, i) => {
-                return (
-                  <Menu.Item key={i}>
-                    {({ active }) => (
-                      <div
-                        className={`${
-                          active && 'bg-[#F1EFFD]'
-                        } text-[14px] cursor-pointer text-ellipsis font-normal overflow-hidden whitespace-nowrap leading-[21px] text-custom_gray-900 px-[18px] py-2 `}
-                      >
-                        {item.title}
-                      </div>
-                    )}
-                  </Menu.Item>
-                );
-              })}
+              {children}
             </Menu.Items>
           </Transition>
         </>

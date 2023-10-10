@@ -3,25 +3,28 @@ import { FC } from 'react';
 import IconFinder from '@icons/IconFinder';
 
 interface IFixedTabelColumn {
-  fixedColumn: any;
+  entries: any;
   setActiveApartament: React.Dispatch<React.SetStateAction<number>>;
   activeApartament: number;
+  fixedHead: string;
 }
 
 const FixedTabelColumn: FC<IFixedTabelColumn> = ({
-  fixedColumn,
+  entries,
   setActiveApartament,
   activeApartament,
+  fixedHead,
 }) => {
+  console.log(entries);
   return (
     <div className="flex flex-col items-start  w-[23%] ">
       <div className="text-left h-[75px] bg-[#F6F6F6]  w-full flex p-5 items-center text-[#4C5870] leading-[21px] text-[14px] font-normal customShadow">
         <div className="flex gap-[21px] items-center">
-          {fixedColumn.head_title}
+          {fixedHead}
           <IconFinder name={'LongArrow'}></IconFinder>
         </div>
       </div>
-      {fixedColumn?.entries.map((entry: any, i: number) => {
+      {entries?.map((entry: any, i: number) => {
         return (
           <div
             onClick={() => {
@@ -43,7 +46,7 @@ const FixedTabelColumn: FC<IFixedTabelColumn> = ({
               {entry?.title}
             </h5>
             <span className="text-[14px] text-[#B2B2BE] font-normal leading-[21px]">
-              {entry.sub_title}
+              {entry?.sub_title}
             </span>
           </div>
         );
