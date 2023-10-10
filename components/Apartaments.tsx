@@ -52,9 +52,7 @@ const Apartaments: FC = () => {
   };
 
   return (
-    <div className="h-max pb-[29px] bg-white col-span-13 rounded-[10px] min-w-full  ">
-      {/* Whole Tabel */}
-
+    <div className="h-max pb-[29px] bg-white col-span-13 rounded-4xl min-w-full  ">
       <div className="flex flex-col ">
         <div className=" px-5 py-5 flex justify-between">
           <div className="flex gap-[12px] items-center">
@@ -82,6 +80,8 @@ const Apartaments: FC = () => {
         </div>
         <div className="w-full bg-custom_purple-800 h-[1px]" />
       </div>
+      {/* Whole Tabel */}
+
       <div className="w-full flex flex-col ">
         <div className="w-full  p-5 flex gap-[15px]">
           <div className="flex [&>*:last-child]:rounded-r-[10px] [&>*:first-child]:rounded-l-[10px]">
