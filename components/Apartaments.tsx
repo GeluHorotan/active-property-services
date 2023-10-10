@@ -1,6 +1,7 @@
 'use client';
-import { FC } from 'react';
+import { useRef, FC } from 'react';
 import FixedTabelColumn from '@components/FixedTabelColumn';
+import { useDraggable } from 'react-use-draggable-scroll';
 
 import TabelBody from '@components/TabelBody';
 import TabelHead from '@components/TabelHead';
@@ -8,6 +9,9 @@ import TabelHead from '@components/TabelHead';
 import ApartamentData from '@ro/ApartamentData.json';
 
 const Apartaments: FC = () => {
+  const ref =
+    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+  const { events } = useDraggable(ref);
   const { apartaments_data } = ApartamentData;
   const { tabel } = apartaments_data;
   return (
@@ -17,7 +21,11 @@ const Apartaments: FC = () => {
         <FixedTabelColumn fixedColumn={apartaments_data.fixed_column} />
 
         {/* Scrollable Area */}
-        <div className="w-full overflow-x-auto scrollbar-hide ">
+        <div
+          ref={ref}
+          {...events}
+          className="w-full overflow-x-auto scrollbar-hide "
+        >
           {/* Table */}
           <table className=" w-full    ">
             {/* Thead only one */}
