@@ -1,90 +1,123 @@
 import { FC } from 'react';
+import IconFinder from './svgs/icons/IconFinder';
 
-const TabelBody: FC = () => {
+interface ITabelBody {
+  data: any;
+}
+
+const TabelBody: FC<ITabelBody> = ({ data }) => {
+  const {
+    status,
+    name,
+    address,
+    number,
+    city,
+    type,
+    owner,
+    tickets,
+    tenant,
+    phone,
+    contact,
+  } = data;
+
   return (
-    <tbody className="">
+    <tbody className="  border-t-[1px] border-b-[1px] border-[#EAEEF7]">
       <tr className="h-[100px] ">
         <td className=" whitespace-nowrap p-5">
-          <div className="bg-custom_green-50 px-[15px] flex items-center justify-center py-[6px] rounded-[16px] gap-[7px]">
-            <span className="w-2 h-2 bg-custom_green-600 rounded-full"></span>
+          <div className="bg-custom_green-50 px-[15px] flex items-center justify-start py-[6px] rounded-[16px] gap-[7px]">
+            <span className="w-2 h-2 bg-custom_green-600 rounded-full" />
             <span className="text-[14px] font-normal leading-[21px] text-custom_green-600">
-              Inchiriat
+              {status}
             </span>
           </div>
         </td>
         <td className=" p-5">
           <span className="text-[14px] font-medium leading-[21px] text-[#0B1023] ">
-            Apartament Siriului
+            {name}
           </span>
         </td>
         <td className="text-[14px] font-medium leading-[21px] text-[#0B1023] whitespace-nowrap p-5">
-          Str Siriului
+          {address}
         </td>
         <td className="text-[14px] font-medium leading-[21px] text-[#0B1023] whitespace-nowrap p-5">
-          8
+          {number}
         </td>
-        <td className="text-[14px] font-medium leading-[21px] text-custom_blue-600 whitespace-nowrap p-5">
-          Constanta
+        <td className="  whitespace-nowrap p-5">
+          <span className="text-[14px] font-medium text-custom_blue-500 px-[15px] py-[6px] rounded-2xl bg-custom_purple-50  leading-[21px]">
+            {city}
+          </span>
         </td>
         <td className=" p-5">
           <span className="text-[14px] font-medium leading-[21px]  text-custom_purple-200 bg-custom_orange-50 py-[6px] rounded-[16px] px-[15px]">
-            Apartament
+            {type}
           </span>
         </td>
         <td className=" whitespace-nowrap p-5">
           <span className="text-[14px] font-medium leading-[21px]  text-[#0B1023] bg-[#F1F1F1] py-[6px] rounded-[16px] pl-[15px] pr-[18px]">
-            Vasile Popescu
+            {owner}
           </span>
         </td>
-        <td className=" whitespace-nowrap  w-max">
+        <td className=" whitespace-nowrap  w-max  ">
           <div className="flex items-center gap-[6px]">
-            <div className="flex rounded-[16px] items-center gap-[7px] py-[6px] px-[10px] bg-[#F1F1F1] w-[57px] h-[32px] justify-center">
-              Y
-              <span className="font-medium text-[14px] leading-[21px] text-[#0B1023]">
-                10
-              </span>
-            </div>
-            <div className="flex rounded-[16px] items-center gap-[7px] py-[6px] px-[10px] bg-[#F1F1F1] w-[57px] h-[32px] justify-center">
-              X
-              <span className="font-medium text-[14px] leading-[21px] text-[#0B1023]">
-                3
-              </span>
-            </div>
+            {tickets?.map((ticket: any, i: number) => {
+              return (
+                <div
+                  key={i}
+                  className="flex rounded-[16px] items-center gap-[7px] py-[6px] px-[10px] bg-[#F1F1F1] w-[57px] h-[32px] justify-center"
+                >
+                  {ticket.iconName && (
+                    <IconFinder
+                      size={13}
+                      className="fill-[#0B1023]"
+                      name={ticket.iconName}
+                    />
+                  )}
+                  <span className="font-medium text-[14px] leading-[21px] text-[#0B1023]">
+                    {ticket?.number}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </td>
         <td className=" whitespace-nowrap p-5">
           <span className="bg-custom_green-50 px-[18px] py-[5px] rounded-2xl text-[14px] leading-[21px] font-medium text-[#0B1023]">
-            Ion Gheorghe
+            {tenant}
           </span>
         </td>
         <td className=" whitespace-nowrap p-5">
-          <div className="flex items-center gap-[10px]">
-            P
-            <span className="font-normal text-[14px] leading-[21px] text-custom_blue-700">
-              0724 111 555
-            </span>
+          <div className="flex flex-col">
+            {phone?.map(
+              (ph: { number: string; iconName: string }, i: number) => {
+                return (
+                  <div key={i} className="flex items-center gap-[10px]">
+                    P
+                    <span className="font-normal text-[14px] leading-[21px] text-custom_blue-700">
+                      {ph.number}
+                    </span>
+                  </div>
+                );
+              }
+            )}
           </div>
         </td>
-        <td className=" bg-blue-400 p-5">
-          <div className="flex flex-col items-center gap-[6px] ">
-            <div className="flex items-center gap-[7px]">
-              {' '}
-              E
-              <span className="leading-[21px] text-[14px] font-normal text-[#0B1023]">
-                oxymoron365
-              </span>
-            </div>
-            <div className="flex items-center gap-[7px]">
-              {' '}
-              E
-              <span className="leading-[21px] text-[14px] font-normal text-[#0B1023]">
-                oxymoron365
-              </span>
-            </div>
+        <td className="text-left p-5">
+          <div className="flex flex-col items-start gap-[6px] ">
+            {contact.map((form: any, i: number) => {
+              return (
+                <div key={i} className="flex items-center gap-[7px]">
+                  {' '}
+                  E
+                  <span className="leading-[21px] text-[14px] font-normal text-[#0B1023]">
+                    {form.address}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </td>
-        <td className=" p-5 bg-red-400">
-          <span className="px-[7px]  py-[6px] bg-[#CCD9F1] rounded-full w-7 h-7">
+        <td className=" p-5 content-center ">
+          <span className="px-[7px]  py-[6px] bg-[#CCD9F1] rounded-full w-7 h-7 flex items-center justify-center">
             D
           </span>
         </td>

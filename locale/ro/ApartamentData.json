@@ -1,0 +1,307 @@
+{
+  "apartaments_data": {
+    "fixed_column": {
+      "head_title": "Denumire proprietate",
+      "entries": [
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        },
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        },
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        },
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        },
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        },
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        },
+        {
+          "title": "Apartament, Siriului 12",
+          "sub_title": "# 125 458"
+        }
+      ]
+    },
+    "tabel": {
+      "tabel_heads": [
+        {
+          "title": "Status"
+        },
+        {
+          "title": "Nume"
+        },
+        {
+          "title": "Strada Nr."
+        },
+        {
+          "title": "Oras"
+        },
+        {
+          "title": "Tip Prop."
+        },
+        {
+          "title": "Proprietar"
+        },
+        {
+          "title": "Tichete in lucru"
+        },
+        {
+          "title": "Chirias"
+        },
+        {
+          "title": "Telefon"
+        },
+        {
+          "title": "Email / site"
+        },
+        {
+          "title": "Act prop."
+        }
+      ],
+      "tabel_body": [
+        {
+          "status": "Inchiriat",
+          "name": "Apartament Siriului",
+          "address": "Str Siriului",
+          "number": 8,
+          "city": "Constanta",
+          "type": "Apartament",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": 10,
+              "iconName": "Technical"
+            },
+            {
+              "number": 3,
+              "iconName": "RealEstate"
+            }
+          ],
+          "tenant": "Ion Gheorghe",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            }
+          ],
+          "contact": [
+            {
+              "address": "@mail@mail.com",
+              "iconName": "Mail"
+            },
+
+            { "address": "www.mail.com", "iconName": "Link" }
+          ]
+        },
+
+        {
+          "status": "Inchiriat",
+          "name": "Complex Casa Ana",
+          "address": "Str Siriului",
+          "number": 123,
+          "city": "Bucuresti",
+          "type": "Casa",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": 10,
+              "iconName": "Technical"
+            }
+          ],
+          "tenant": "Ion Gheorghe",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            },
+            {
+              "number": "0241 555 111",
+              "iconName": "Home"
+            }
+          ],
+          "contact": [
+            {
+              "address": "@mail@mail.com",
+              "iconName": "Mail"
+            }
+          ]
+        },
+        {
+          "status": "Vacant",
+          "name": "Apartament Siriului",
+          "address": "Str Siriului",
+          "number": 8,
+          "city": "Constanta",
+          "type": "Apartament",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": 3,
+              "iconName": "RealEstate"
+            }
+          ],
+          "tenant": "-",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            }
+          ],
+          "contact": [
+            {
+              "address": "@mail@mail.com",
+              "iconName": "Mail"
+            },
+
+            { "address": "www.mail.com", "iconName": "Link" }
+          ]
+        },
+        {
+          "status": "Inchiriat",
+          "name": "Complex Casa Ana",
+          "address": "Str Siriului",
+          "number": 123,
+          "city": "Bucuresti",
+          "type": "Casa",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": "-"
+            }
+          ],
+          "tenant": "Ion Gheorghe",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            },
+            {
+              "number": "0241 555 111",
+              "iconName": "Home"
+            }
+          ],
+          "contact": [
+            {
+              "address": "@mail@mail.com",
+              "iconName": "Mail"
+            }
+          ]
+        },
+        {
+          "status": "Vacant",
+          "name": "Apartament Siriului",
+          "address": "Str Siriului",
+          "number": 8,
+          "city": "Constanta",
+          "type": "Apartament",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": "-"
+            }
+          ],
+          "tenant": "-",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            }
+          ],
+          "contact": [
+            {
+              "address": "mail@mail.com",
+              "iconName": "Mail"
+            },
+            {
+              "address": "mail.com",
+              "iconName": "Link"
+            }
+          ]
+        },
+        {
+          "status": "Indisponibil",
+          "name": "Complex Casa Ana",
+          "address": "Str Siriului",
+          "number": 123,
+          "city": "Bucuresti",
+          "type": "Casa",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": "10",
+              "iconName": "Technical"
+            },
+            {
+              "number": "3",
+              "iconName": "RealEstate"
+            }
+          ],
+          "tenant": "-",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            },
+            {
+              "number": "0241 555 111",
+              "iconName": "Home"
+            }
+          ],
+          "contact": [
+            {
+              "address": "mail@mail.com",
+              "iconName": "Mail"
+            }
+          ]
+        },
+        {
+          "status": "Vacant",
+          "name": "Apartament Siriului",
+          "address": "Str Siriului",
+          "number": 8,
+          "city": "Constanta",
+          "type": "Apartament",
+          "owner": "Vasile Popescu",
+          "tickets": [
+            {
+              "number": "10",
+              "iconName": "Technical"
+            },
+            {
+              "number": "3",
+              "iconName": "RealEstate"
+            }
+          ],
+          "tenant": "-",
+          "phone": [
+            {
+              "number": "0724 111 555",
+              "iconName": "Mobile"
+            }
+          ],
+          "contact": [
+            {
+              "address": "mail@mail.com",
+              "iconName": "Mail"
+            },
+            {
+              "address": "mail.com",
+              "iconName": "Link"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
